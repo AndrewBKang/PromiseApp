@@ -9,6 +9,7 @@ PromiseApp::Application.routes.draw do
   # end
   root :to => 'resolutions#index'
   resources :users
+  resources :resolutions
   
   match 'profile' => 'users#profile'
 

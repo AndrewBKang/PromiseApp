@@ -8,13 +8,14 @@
 </head>
 <body>
 	
-	<%= render :partial => 'layouts/navigation_bars' %>
-
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+	<%= render :partial => 'layouts/navigation_bar' %>
 	
 	<div class="content clearfix">
-		<%= render :partial => '/layouts/profile' %>
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+		<%= render :partial => '/layouts/profile' if user_signed_in?%>		
+		<%= render :partial => '/layouts/right_feed' if user_signed_in?%>
+		
 		<%= yield %>
 	</div>
 	

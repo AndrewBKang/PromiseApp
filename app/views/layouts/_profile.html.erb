@@ -1,16 +1,16 @@
-<section class="profile">
-			<figure>
-				<%= image_tag current_user.profile_photo.url(:big) %>
-			</figure>
-			<section class="user-info">
-				<table>
-					<tr class="username">
-						<td><%= current_user.username %></td>
-					</tr>
-					<tr class="characteristic">
-						<td></td>
-						<td></td>
-					</tr>
-				</table>
-			</section>
-		</section>
+<section class="profile bubble">
+	<figure>
+		<%= image_tag current_user.profile_photo.url(:big) %>
+	</figure>
+	<section class="user-info">
+		<table>
+			<tr class="username">
+				<td><%= current_user.username %></td>
+			</tr>
+			<tr class="characteristic">
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</section>
+</section>
