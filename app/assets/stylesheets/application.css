@@ -1,0 +1,350 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.new_user {
+	border-radius:10px;
+	width:300px;
+	margin:auto;
+	text-align:center;
+	padding:20px 0;
+	overflow:hidden;
+	background: rgb(96,108,136); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(96,108,136,1) 0%, rgba(63,76,107,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(96,108,136,1)), color-stop(100%,rgba(63,76,107,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 */
+	color:white;
+}
+
+.sign-button > input {
+	width:100px;
+	background-color:blue;
+	color:white;
+	font-size:20px;
+	border-radius:10px;
+}
+
+.signup-links {
+	margin:auto;
+	width:290px;
+}
+
+html, head, body, header, div, li, a, aside, table, tr, td, figure, img, h4, p, h3{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
+	height:100%;
+	width:100%;
+}
+
+body {
+	font-family: sans-serif;
+	height:100%;
+	width:100%;
+}
+
+.clearfix:after {
+	clear:both;
+	display:table;
+	content:"";
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type:none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+html {
+	font-family: arial,sans-serif;
+	font-size:small;
+}
+
+/* SideBar */
+
+.left {
+	height:100%;
+	width:200px;
+}
+
+.navbar-left {
+	position:fixed;
+	bottom:50%;
+	margin-bottom:-95px;
+	padding-left:20px;
+	z-index:100;
+}
+
+.navbar-left > .menu > li {
+	margin: 5px 0;
+	padding: 10px 0;
+}
+
+.navbar-left > .menu > li > a {
+	padding: 10px 14px;
+	background-image:url('button4.png');
+	background-size: 36px 34px;
+	background-repeat:no-repeat;
+	color:white;
+}
+
+.navbar-left > .menu > li > a:hover {
+	padding: 10px 14px;
+	background-image:url('button5.png');
+	background-size: 40px 34px;
+	background-repeat:no-repeat;
+	color:white;
+}
+
+.navbar-left > .menu > li > a:hover {
+	
+}
+
+.navbar-left > .menu > li > .search-left {
+	display: none;
+	margin:-2px 0;
+	padding:0;
+}
+
+.navbar-left > .menu > li > a.clicked {
+	padding: 10px 14px;
+	background-image:url('button1.png');
+	background-size: 36px 34px;
+	background-repeat:no-repeat;
+	color:white;
+}
+
+/* Content */
+
+.content {
+	width: 900px;
+	margin:auto;
+	padding:25px;
+	padding-top:60px;
+	
+}
+
+/* profile */
+
+.profile {
+	float: left;
+	width: 20%;
+	border-radius: 10px;
+	background: rgb(96,108,136); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(96,108,136,1) 0%, rgba(63,76,107,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(96,108,136,1)), color-stop(100%,rgba(63,76,107,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 */
+}
+
+.profile > figure {
+	width:100%;
+	text-align: center;
+	padding-top:20px;
+}
+
+.profile > .user-info {
+	margin: 20px;
+	margin-top: 10px;
+	color:white;
+}
+
+/* friend feed right */
+
+.feed-right {
+	width:20%;
+	height: 400px;
+	float:right;
+	border:1px solid black;
+	border-radius:10px;
+}
+
+.feed-right > ul {
+	padding:20px;
+}
+
+/* middle container body */
+
+.body-container {
+	float:left;
+	width:523px;
+	margin-left:20px;
+}
+
+.mini-window-container {
+	width:100%;
+	border:1px solid black;
+	border-radius:10px;
+	margin-bottom:25px;
+	overflow-x: hidden;
+}
+
+.mini-window-container > h3 {
+	margin:10px;
+	font-weight:bold;
+}
+
+.mini-window-container > .resolution-list {
+	margin:auto;
+}
+
+.mini-window-container > .resolution-list > .mini-window {
+	height:140px;
+	margin: 0px 10px;
+	margin-bottom: 25px;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .header {
+	height:100%;
+	overflow:scroll;
+	border:1px solid black;
+	border-radius: 10px;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .friends-profile {
+	width: 70px;
+	float:left;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .friends-profile > .pic {
+	margin: 10px;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .friends-profile > .friendname {
+	margin-top:-10px;
+	text-align:center;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .header > .resolution {
+	float:right;
+	width:400px;
+	padding:10px;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .header > .resolution > .title > h4 {
+	float:left;
+	font-size: 15px;
+	font-weight:bold;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .header > .resolution > .title > .info {
+	float:right;
+	font-size:10px;
+}
+.mini-window-container > .resolution-list > .mini-window > .header > .resolution > .title > .info > li {
+	float:left;
+	margin-right: 4px ;
+}
+
+
+.mini-window-container > .resolution-list > .mini-window > .header > .resolution > .statement {
+	padding-top:5px;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .mini-footer {
+	padding-top:5px;
+	width:100%;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .mini-footer > .links {
+	float:right;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .mini-footer > .links > li {
+	float:left;
+	margin-right: 4px;
+}
+
+/* Navigation Bar */
+
+.nav {
+	z-index:100;
+	position:fixed;
+	width:100%;
+	background: rgb(96,108,136); /* Old browsers */
+
+	background: -moz-linear-gradient(left,  rgba(96,108,136,1) 0%, rgba(63,76,107,1) 100%); /* FF3.6+ */
+
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(96,108,136,1)), color-stop(100%,rgba(63,76,107,1))); /* Chrome,Safari4+ */
+
+	background: -webkit-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Chrome10+,Safari5.1+ */
+
+	background: -o-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Opera 11.10+ */
+
+	background: -ms-linear-gradient(left,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* IE10+ */
+
+	background: linear-gradient(to right,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* W3C */
+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 */
+
+	}
+
+.navbar {
+	width: 1000px;
+	margin:auto;
+}
+
+.navbar > .left-menu {
+	float:left;
+}
+
+.navbar > .left-menu > li {
+	float:left;
+	padding: 10px 0;
+}
+
+.navbar > .left-menu > li > a {
+	padding: 10px;
+	color:white;
+}
+
+.navbar > ul > li:hover > a {
+	color: lightgray;
+}
+
+.navbar > .search-bar {
+	float:right;
+	padding: 5px;
+}
+
+.navbar > .right-menu {
+	float:right;
+}
+
+.navbar > .right-menu > li {
+	float: left;
+	padding: 10px 0;
+}
+
+.navbar > .right-menu > li > a{
+	color:white;
+	padding: 10px;
+}

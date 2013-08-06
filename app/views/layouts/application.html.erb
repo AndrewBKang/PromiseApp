@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PromiseApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<%= render :partial => 'layouts/navigation_bars' %>
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	
+	<div class="content clearfix">
+		<%= render :partial => '/layouts/profile' %>
+		<%= yield %>
+	</div>
+	
+</body>
+</html>
