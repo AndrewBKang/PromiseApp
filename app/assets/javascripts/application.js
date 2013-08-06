@@ -13,3 +13,41 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function(){
+	
+	$('.search').click(function(){
+		$('.search-left').toggle()
+	});
+	
+	$('.navbar-left a').mousedown(function(){
+		$(this).addClass("clicked")
+	});
+	
+	$('.navbar-left a').mouseup(function(){
+		$(this).removeClass("clicked")
+	});
+	
+	$('.navbar-left a').mouseleave(function(){
+		$(this).removeClass("clicked")
+	});
+	
+	$('.mini-window-container').resizable({
+		maxWidth: 538,
+		minWidth: 538,
+		maxHeight: 800,
+		minHeight: 160
+	});
+	
+	$('.mini-window').resizable({
+		maxWidth: 501,
+		minWidth: 501,
+		maxHeight: 480,
+		minHeight: 85
+	});
+	
+	$('.body-container').sortable({
+		revert:true,
+		handle: 'h3'
+	});
+	
+});
