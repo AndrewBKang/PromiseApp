@@ -1,22 +1,14 @@
+</div>
 <div class="body-container">
 	<%= render :partial => 'profile_navbar' %>
-	<ul class="window-container-list">
-	
-		<li class="mini-window-container bubble">
-			<h3><a href="#">My Resolutions</a></h3>
-			<ul class="resolution-list">
-				<% @resolutions.each do |resolution| %>	
-					<%= render :partial => 'resolution', locals: {resolution: resolution}%>
-
-				<% end %>
-			</ul>
-		</li>
-	
-	</ul>
+	<%= render :partial => 'shared/window_container', locals: {window_type: "My Resolutions"} %>
 </div>
 
 <script>
+
 	$('#new_resolution').on("ajax:success", function(event,data){
+		console.log($('.resolution-list'))
 		$('.resolution-list').prepend(data);
 	});
+
 </script>

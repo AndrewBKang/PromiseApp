@@ -2,8 +2,23 @@
 <header class="nav clearfix">
 	<div class="navbar">
 		<ul class="left-menu">
-			<li><a href="#">logo</a></li>
-			<li><a href="#">friend requests</a></li>
+			<li><%= link_to("logo", resolutions_url) %></li>
+			<li>
+				<a href="#">
+					friend requests 
+					<% if current_user.friend_requests.length > 0 %>
+						<strong class="badge"><%= current_user.friend_requests.length %></strong> 
+					<% end %>
+				</a>
+				<ul class="requests-dropdown bubble clearfix">
+					<% current_user.friend_requests.each do |request| %>
+						<li>
+							<div class="name"><%= request[:friendname] %></div>
+							<%= button_to "Accept", friendship_url(request[:id]), method: "put", remote:true, class:"new_friend" %>
+						</li>
+					<% end %>
+				</ul>
+			</li>
 			<li><a href="#">notifications</a></li>
 		</ul>
 		
@@ -20,3 +35,11 @@
 </header>
 
 <% end %>
+
+<script>
+	$('.button_to').on("ajax:success", function(event){
+		$(event.target).parent().addClass('friended');
+		var $badge = $('.badge');
+		($badge.text() == 1) ? $badge.addClass('friended') : $badge.text($badge.text()-1)
+	});
+</script>

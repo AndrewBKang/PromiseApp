@@ -46,7 +46,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 */
 }
 
-html, head, body, header, div, li, a, aside, table, tr, td, figure, img, h4, p, h3{
+html, head, body, header, div, li, a, aside, table, tr, td, figure, img, h4, p, h3, strong{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -86,6 +86,17 @@ a {
 html {
 	font-family: arial,sans-serif;
 	font-size:small;
+}
+
+strong {
+	font-weight:bold;
+}
+
+.badge {
+	font-size:10px;
+	padding:2px 5px;
+	background:rgba(255,255,255,.2);
+	border-radius:10px;
 }
 
 /* SideBar */
@@ -153,21 +164,29 @@ html {
 
 /* profile */
 
+
+.profile-container {
+	width:20%;
+	float:left;
+}
+
 .profile {
 	float: left;
-	width: 20%;
+	width: 100%;
 	border-radius: 10px;
+	margin-bottom: 20px;
 }
 
 .profile > figure {
-	width:100%;
-	text-align: center;
-	padding-top:20px;
+	float:left;
+	padding:20px;
+	padding-right:10px;
 }
 
 .profile > .user-info {
 	margin: 20px;
-	margin-top: 10px;
+	margin-left:0;
+	margin-bottom:0;
 	color:white;
 }
 
@@ -240,6 +259,9 @@ html {
 .mini-window-container > .resolution-list > .mini-window > .friends-profile > .friendname {
 	margin-top:-10px;
 	text-align:center;
+}
+
+.mini-window-container > .resolution-list > .mini-window > .friends-profile > .friendname > a{
 	color:white;
 }
 
@@ -309,7 +331,11 @@ html {
 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 */
 
-	}
+}
+
+.friended {
+	display:none;
+}
 
 .navbar {
 	width: 1000px;
@@ -323,6 +349,28 @@ html {
 .navbar > .left-menu > li {
 	float:left;
 	padding: 10px 0;
+}
+
+.navbar > .left-menu > li > .requests-dropdown{
+	margin-top:10px;
+	position:absolute;
+	color:white;
+	border-radius:10px;
+	display:none;
+}
+
+.navbar > .left-menu > li:hover > .requests-dropdown{
+	display:block;
+}
+
+.navbar > .left-menu > li > .requests-dropdown > li > .name {
+	padding:10px;
+	float:left;
+}
+
+.navbar > .left-menu > li > .requests-dropdown > li > form {
+	float:left;
+	padding:5px;
 }
 
 .navbar > .left-menu > li > a {

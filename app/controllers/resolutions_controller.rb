@@ -3,7 +3,7 @@ class ResolutionsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @resolutions = Resolution.all
+    @resolutions = Resolution.order('id DESC').all
   end
   
   def create
@@ -12,7 +12,7 @@ class ResolutionsController < ApplicationController
     @resolution.save
     
     if request.xhr?
-      render partial: "resolution", locals: {resolution: @resolution}
+      render partial: "shared/resolution", locals: {resolution: @resolution}
     else
       redirect_to profile_url
     end

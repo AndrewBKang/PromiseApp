@@ -13,10 +13,10 @@
 	
 	<div class="content clearfix">
 		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
-		<%= render :partial => '/layouts/profile' if user_signed_in?%>		
+		<p class="alert"><%= alert %></p>		
 		<%= render :partial => '/layouts/right_feed' if user_signed_in?%>
-		
+		<div class="profile-container">
+		<%= render :partial => '/layouts/profile' if user_signed_in?%>
 		<%= yield %>
 	</div>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>

@@ -1,0 +1,13 @@
+<ul class="window-container-list">
+
+	<li class="mini-window-container bubble">
+		<h3><a href="#"><%= window_type %></a></h3>
+		<ul class="resolution-list">
+			<% @resolutions.each do |resolution| %>	
+				<%= render :partial => 'shared/resolution', locals: {resolution: resolution}%>
+
+			<% end %>
+		</ul>
+	</li>
+
+</ul>

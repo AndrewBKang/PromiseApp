@@ -1,0 +1,39 @@
+<section class="user profile bubble clearfix">
+	<figure>
+		<%= image_tag @profile_pic %>
+	</figure>
+	<section class="user-info">
+		<table>
+			<tr class="username">
+				<td><%= @username %></td>
+			</tr>
+			<tr class="characteristic">
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</section>
+	<% unless @already_friends %>
+		<%= form_for(@friendship, remote: true) do |f| %>
+			<%= f.hidden_field :friend_id %>
+			<%= hidden_field_tag 'friendship[friend_id]', @id %>
+			<%= f.submit "Add Friend", :class => 'add-friend-button'%>
+		<% end %>
+
+	<% end %>
+</section>
+</div>
+
+<div class="body-container">
+	<%= render :partial => 'shared/window_container', 
+	locals: {window_type: "#{@username.capitalize}'s Resolutions"} %>
+</div>
+
+<script>
+
+	$('.new_friendship').on("ajax:success", function(event){
+		$('.add-friend-button').attr('value', 'request sent')
+		$('.add-friend-button').attr('disabled', 'disabled')
+	});
+
+</script>

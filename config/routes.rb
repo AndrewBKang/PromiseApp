@@ -10,6 +10,7 @@ PromiseApp::Application.routes.draw do
   root :to => 'resolutions#index'
   resources :users
   resources :resolutions
+  resources :friendships, only: [:create,:destroy,:update]
   
   match 'profile' => 'users#profile'
 
