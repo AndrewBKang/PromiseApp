@@ -1,39 +1,22 @@
-<ul class="body-container">
+<div class="body-container">
 	<%= render :partial => 'profile_navbar' %>
-	<li class="mini-window-container bubble">
-		<h3><a href="#">My Resolutions</a></h3>
-		<ul class="resolution-list">
-			<% @resolutions.each do |resolution| %>	
-				<li class="mini-window">
-					<section class="friends-profile">
-						<figure class="pic"><%= image_tag resolution.user.profile_photo.url(:small) %></figure>
-						<div class="friendname"><%= resolution.user.username %></div>
-					</section>
-					<div class="header">
-						<section class="resolution">
-							<div class="title clearfix">
-								<h4><a href="#"><%= resolution.title %></a></h4>
-								<ul class="info clearfix">
-									<li><a href="#"><%= resolution.created_at %></a></li>
-									<li><a href="#"><%= resolution.updated_at %></a></li>
-								</ul>
-							</div>
-							<div class="statement">
-								<p><%= resolution.body %></p>
-							</div>
-						</section>
-					</div>
-					<div class="mini-footer clearfix">
-						<ul class="links clearfix">
-							<li><a href="#"> 113 comments </a></li>
-							<li><a href="#"> -5 likes </a></li>
-							<li><a href="#"> 0 dislikes </a></li>
-							<li><a href="#">like</a></li>
-							<li><a href="#">dislike</a></li>
-						</ul>
-					</div>
-				</li>
-			<% end %>
-		</ul>
-	</li>
-</ul>
+	<ul class="window-container-list">
+	
+		<li class="mini-window-container bubble">
+			<h3><a href="#">My Resolutions</a></h3>
+			<ul class="resolution-list">
+				<% @resolutions.each do |resolution| %>	
+					<%= render :partial => 'resolution', locals: {resolution: resolution}%>
+
+				<% end %>
+			</ul>
+		</li>
+	
+	</ul>
+</div>
+
+<script>
+	$('#new_resolution').on("ajax:success", function(event,data){
+		$('.resolution-list').prepend(data);
+	});
+</script>

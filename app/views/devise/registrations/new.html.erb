@@ -1,6 +1,6 @@
 
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)), :html => {class: 'bubble'} do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {class: 'bubble'}) do |f| %>
   <%= devise_error_messages! %>
 	<div class="inputs">
 		<div class="username"><%= f.label :username %><br>

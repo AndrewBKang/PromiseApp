@@ -45,7 +45,7 @@ $(document).ready(function(){
 		minHeight: 85
 	});
 	
-	$('.body-container').sortable({
+	$('.window-container-list').sortable({
 		revert:true,
 		handle: 'h3'
 	});

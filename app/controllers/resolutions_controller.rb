@@ -7,11 +7,14 @@ class ResolutionsController < ApplicationController
   end
   
   def create
+    
     @resolution = Resolution.new(params[:resolution])
-    if @resolution.save
-      redirect_to profile_url
+    @resolution.save
+    
+    if request.xhr?
+      render partial: "resolution", locals: {resolution: @resolution}
     else
-      
+      redirect_to profile_url
     end
   end
   

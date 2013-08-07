@@ -1,5 +1,5 @@
 <div class="resolution_form">
-	<%= form_for @resolution do |f| %>
+	<%= form_for(@resolution, remote: true) do |f| %>
 		<%= f.label :title %><br>
 		<%= f.text_field :title %><br>
 		<%= f.label :body %><br>
