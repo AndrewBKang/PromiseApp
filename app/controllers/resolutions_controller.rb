@@ -8,8 +8,8 @@ class ResolutionsController < ApplicationController
   
   def create
     
-    @resolution = Resolution.new(params[:resolution])
-    @resolution.save
+    @resolution = Resolution.create(params[:resolution])
+    @resolution.friend_activities.create
     
     if request.xhr?
       render partial: "shared/resolution", locals: {resolution: @resolution}
