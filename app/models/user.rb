@@ -14,7 +14,8 @@ class User < ActiveRecord::Base
   
   has_attached_file :profile_photo, :styles => {
     :big => "150x150#",
-    :small => "50x50#"
+    :small => "50x50#",
+    :thumb => "25x25#"
   }
   
   validates_presence_of :username
@@ -27,4 +28,13 @@ class User < ActiveRecord::Base
                                                id: friendship.id} }
   end
   
+  def approved_friends_ids
+    approved_friendships = Friendship.where('user_id = ? AND status = ?', self.id, 1)
+    approved_friendships.map { |friendship| friendship.friend_id }
+  end
+  
+  # def notifications
+  #   Notification.where()
+  # end
+  # 
 end

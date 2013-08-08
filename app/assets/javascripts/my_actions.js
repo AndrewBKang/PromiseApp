@@ -30,6 +30,13 @@ $(document).ready(function(){
 		minHeight: 85
 	});
 	
+	$('.feed-right').resizable({
+		maxHeight:480,
+		minHeight:150,
+		maxWidth:190,
+		minWidth:190
+	});
+	
 	$('.window-container-list').sortable({
 		revert:true,
 		handle: 'h3'
