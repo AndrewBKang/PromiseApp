@@ -226,11 +226,33 @@ strong {
 	float:right;
 	margin-right:-10px;
 	border-radius:10px;
+	overflow:scroll;
+	overflow-x:hidden;
 }
 
 .feed-right > ul {
 	margin:20px;
-	
+}
+
+.feed-right > ul > li > figure {
+	float:left;
+	width:25px;
+}
+
+.feed-right > ul > li > h4 {
+	color:white;
+}
+
+.feed-right > ul > li > header {
+	color:black;
+	border:1px solid black;
+	border-radius: 10px;
+	background-color:rgba(255,255,255,.75);
+	float:left;
+}
+
+.feed-right > ul > li > header >.news {
+	padding:5px;
 }
 
 /* middle container body */
@@ -460,6 +482,10 @@ strong {
 	display:block;
 	color:white;
 	border-right:1px solid rgba(0,0,0,.2);
+}
+
+.page-navbar > li > a:hover {
+	color:lightgray;
 }
 
 /*.page-navbar > li:hover > .resolution_form {

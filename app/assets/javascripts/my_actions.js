@@ -20,7 +20,7 @@ $(document).ready(function(){
 		maxWidth: 538,
 		minWidth: 538,
 		maxHeight: 800,
-		minHeight: 160
+		minHeight: 35
 	});
 	
 	$('.mini-window').resizable({

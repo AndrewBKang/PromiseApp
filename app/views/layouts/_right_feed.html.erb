@@ -1,6 +1,14 @@
-<aside class="feed-right bubble" style="overflow:scroll;">
+<aside class="feed-right bubble glow">
 	<ul>
 		<h3>Friend Activity</h3>
-		<li><a href="#">friends activity1</a></li>
+		<% current_user.feed.each do |activity| %>
+			<li>
+				<figure><%= image_tag(activity[:picture]) %></figure>
+				<h4><%= activity[:username] %></h4>
+				<header class="cut-out">
+					<div class="news"><%= "made a new #{activity[:type]} '#{activity[:title]}'" %></div>
+				</header>
+			</li>
+		<% end %>
 	</ul>
 </aside>

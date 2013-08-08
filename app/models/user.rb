@@ -33,8 +33,12 @@ class User < ActiveRecord::Base
     approved_friendships.map { |friendship| friendship.friend_id }
   end
   
-  # def notifications
-  #   Notification.where()
-  # end
-  # 
+  def feed
+    activities = FriendActivity.feed(self)
+    activities.map { |friend_activity| {title: friend_activity.activity.title,
+                                        username: friend_activity.activity.user.username,
+                                        picture: friend_activity.activity.user.profile_photo.url(:thumb),
+                                        type: friend_activity.activity_type}}
+  end
+  
 end
