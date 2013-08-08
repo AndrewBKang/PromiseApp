@@ -46,6 +46,26 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 */
 }
 
+.cut-out {
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+	box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.glow {
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,.5);
+	-moz-box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,.5);
+	box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,.5);
+
+	-webkit-border-radius: 60em;
+	-moz-border-radius: 60em;
+	border-radius: 60em;
+}
+
 html, head, body, header, div, li, a, aside, table, tr, td, figure, img, h4, p, h3, strong{
 	margin: 0;
 	padding: 0;
@@ -244,7 +264,7 @@ strong {
 	overflow:scroll;
 	border:1px solid black;
 	border-radius: 10px;
-	background-color:white;
+	background-color:rgba(255,255,255,.75);
 }
 
 .mini-window-container > .resolution-list > .mini-window > .friends-profile {
