@@ -12,7 +12,15 @@ class FriendshipsController < ApplicationController
     @friendship.approve
     @friendship2 = Friendship.new({friend_id: @friendship.user_id, user_id: @friendship.friend_id})
     @friendship2.approve
-    render :nothing => true
+    render nothing: true
+  end
+  
+  def destroy
+    @friendship = Friendship.find(params[:id])
+    @friendship2 = Friendship.find_by_user_id_and_friend_id(@friendship.friend_id, @friendship.user_id)
+    @friendship.destroy
+    @friendship2.destroy
+    render nothing: true
   end
   
 end

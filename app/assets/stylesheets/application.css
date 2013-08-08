@@ -359,9 +359,9 @@ strong {
 	display:none;
 }
 
-.navbar > .left-menu > li:hover > .requests-dropdown{
+/*.navbar > .left-menu > li:hover > .requests-dropdown{
 	display:block;
-}
+}*/
 
 .navbar > .left-menu > li > .requests-dropdown > li > .name {
 	padding:10px;
@@ -427,9 +427,9 @@ strong {
 	border-right:1px solid rgba(0,0,0,.2);
 }
 
-.page-navbar > li:hover > .resolution_form {
+/*.page-navbar > li:hover > .resolution_form {
 	display: block;
-}
+}*/
 
 /* resolution form */
 

@@ -15,7 +15,10 @@ class UsersController < ApplicationController
     @username = user.username
     @id = user.id
     @current_friends_ids = current_user.friends.map {|friend| friend.id}
-    @already_friends = @current_friends_ids.include? @id
+    @not_friends = !(@current_friends_ids.include? @id)
+    @existing_friendship = Friendship.find_by_user_id_and_friend_id(current_user.id,@id)
+    @approved_friends = (@existing_friendship.status == 1) unless @not_friends
+    @friendship_id = @existing_friendship.id if @approved_friends
   end
   
 end
