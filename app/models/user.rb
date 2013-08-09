@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   
   has_many :friendships
   has_many :friends, through: :friendships, source: :friend
+  has_many :notifications
   
   has_attached_file :profile_photo, :styles => {
     :big => "150x150#",
@@ -25,6 +26,7 @@ class User < ActiveRecord::Base
   def friend_requests
     unapproved_friendships = Friendship.where('friend_id = ? AND status = ?',self.id,0)
     unapproved_friendships.map { |friendship| {friendname: User.find(friendship.user_id).username,
+                                               user_id: friendship.user_id,
                                                id: friendship.id} }
   end
   
@@ -38,7 +40,17 @@ class User < ActiveRecord::Base
     activities.map { |friend_activity| {title: friend_activity.activity.title,
                                         username: friend_activity.activity.user.username,
                                         picture: friend_activity.activity.user.profile_photo.url(:thumb),
-                                        type: friend_activity.activity_type}}
+                                        type: friend_activity.activity_type, 
+                                        user_id: friend_activity.user_id,
+                                        activity_id: friend_activity.id}}
+  end
+  
+  def notifications_count
+    self.notifications.where('read = ?',0).count
+  end
+  
+  def unread_notifications
+    self.notifications.select {|note| note.read == 0}.reverse
   end
   
 end

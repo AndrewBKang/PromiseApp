@@ -18,4 +18,8 @@ class ResolutionsController < ApplicationController
     end
   end
   
+  def show
+    @resolution = Resolution.find(params[:id])
+  end
+  
 end

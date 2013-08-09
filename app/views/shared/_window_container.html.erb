@@ -2,12 +2,23 @@
 
 	<li class="mini-window-container bubble glow">
 		<h3><a href="#"><%= window_type %></a></h3>
-		<ul class="resolution-list">
-			<% @resolutions.each do |resolution| %>	
-				<%= render :partial => 'shared/resolution', locals: {resolution: resolution}%>
+		<% if @resolutions %>
+			<ul class="resolution-list">
+				<% @resolutions.each do |resolution| %>	
+					<%= render :partial => 'shared/resolution', locals: {resolution: resolution}%>
 
-			<% end %>
-		</ul>
+				<% end%>
+			</ul>
+		<% elsif @resolution %>
+			<ul class="resolution-list">
+				<li>
+					<%= render :partial => 'shared/resolution', locals: {resolution: @resolution} %>
+					<!-- resolution comments -->
+				</li>
+				<!-- resolution updates nested comments-->
+			</ul>
+		<% end %>
+		
 	</li>
 
 </ul>

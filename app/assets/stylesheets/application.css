@@ -239,8 +239,10 @@ strong {
 	width:25px;
 }
 
-.feed-right > ul > li > h4 {
+.feed-right > ul > li > h4 > a{
+	float:left;
 	color:white;
+	padding-left:10px;
 }
 
 .feed-right > ul > li > header {
@@ -249,6 +251,7 @@ strong {
 	border-radius: 10px;
 	background-color:rgba(255,255,255,.75);
 	float:left;
+	width:150px;
 }
 
 .feed-right > ul > li > header >.news {
@@ -408,24 +411,33 @@ strong {
 	padding: 10px 0;
 }
 
-.navbar > .left-menu > li > .requests-dropdown{
+.navbar > .left-menu > li > .nav-dropdown{
 	margin-top:10px;
 	position:absolute;
 	color:white;
 	border-radius:10px;
+	width:200px;
 	display:none;
 }
 
-/*.navbar > .left-menu > li:hover > .requests-dropdown{
+/*.navbar > .left-menu > li:hover > .nav-dropdown{
 	display:block;
 }*/
 
-.navbar > .left-menu > li > .requests-dropdown > li > .name {
+.navbar > .left-menu > li > .nav-dropdown > li > .name {
 	padding:10px;
 	float:left;
 }
 
-.navbar > .left-menu > li > .requests-dropdown > li > form {
+.navbar > .left-menu > li > .nav-dropdown > li > .message {
+	padding:10px;
+}
+
+.navbar > .left-menu > li > .nav-dropdown > li > .message > a{
+	color:white;
+}
+
+.navbar > .left-menu > li > .nav-dropdown > li > form {
 	float:left;
 	padding:5px;
 }

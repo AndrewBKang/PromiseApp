@@ -12,6 +12,7 @@ class FriendshipsController < ApplicationController
     @friendship.approve
     @friendship2 = Friendship.new({friend_id: @friendship.user_id, user_id: @friendship.friend_id})
     @friendship2.approve
+    @friendship2.notifications.create
     render nothing: true
   end
   

@@ -10,16 +10,33 @@
 						<strong class="badge"><%= current_user.friend_requests.length %></strong> 
 					<% end %>
 				</a>
-				<ul class="requests-dropdown bubble clearfix">
+				<ul class="nav-dropdown bubble clearfix">
 					<% current_user.friend_requests.each do |request| %>
 						<li>
-							<div class="name"><%= request[:friendname] %></div>
+							<div class="name"><%= link_to(request[:friendname],user_url(request[:user_id])) %></div>
 							<%= button_to "Accept", friendship_url(request[:id]), method: "put", remote:true, class:"new_friend" %>
 						</li>
 					<% end %>
 				</ul>
 			</li>
-			<li><a href="#">notifications</a></li>
+			<li>
+				<% note_count = current_user.notifications_count %>
+				<a class="notification-tab" data-remote="true" href="<%= read_url(note_count) %>">
+					notifications
+					<% if note_count > 0 %>
+						<strong class="badge"><%= note_count %></strong>
+					<% end %>
+				</a>
+				<ul class="nav-dropdown bubble clearfix">
+					<% current_user.notifications.reverse.each do |note| %>
+						<li>
+							<div class="message">
+								<%= link_to(note.message,user_url(note.activity.user_id)) %>
+							</div>
+						</li>
+					<% end %>
+				</ul>
+			</li>
 		</ul>
 		
 		<div class="search-bar">
@@ -37,9 +54,15 @@
 <% end %>
 
 <script>
+	
 	$('.button_to').on("ajax:success", function(event){
 		$(event.target).parent().addClass('friended');
 		var $badge = $('.badge');
 		($badge.text() == 1) ? $badge.addClass('friended') : $badge.text($badge.text()-1)
 	});
+	
+	$('.notification-tab').on("ajax:success", function(){
+		$('.badge').hide();
+	});
+	
 </script>

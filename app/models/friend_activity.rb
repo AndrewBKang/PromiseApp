@@ -10,7 +10,7 @@ class FriendActivity < ActiveRecord::Base
   end
   
   def self.feed(current_user_guy)
-    self.where(user_id: current_user_guy.approved_friends_ids)
+    self.where(user_id: current_user_guy.approved_friends_ids).order('id DESC')
   end
   
 end

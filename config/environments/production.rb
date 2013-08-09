@@ -37,7 +37,7 @@ PromiseApp::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => 'promise_app_prouction',
+      :bucket => 'promise_app_production',
       :access_key_id => 'AKIAIV7LFUDMY2WKEYZA',
       :secret_access_key => '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'
     }

@@ -43,7 +43,7 @@ $(document).ready(function(){
 	});
 	
 	$('.navbar > .left-menu > li > a').on('click', function(event){
-		$('.requests-dropdown').toggle();
+		$('.nav-dropdown').toggle();
 	});
 	
 	$('.page-navbar > li > a').on('click', function(event){
