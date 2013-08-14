@@ -35,7 +35,25 @@
 	width:290px;
 }
 
-.bubble {
+.comments > li {
+	width:;
+}
+
+.commenter {
+	float:left;
+}
+
+.commenter > figure {
+	float:left;
+}
+
+.commenter > h4 {
+	float:left;
+	padding-right:10px;
+}
+
+.comment-body {
+	float:left;
 }
 
 .cut-out {
@@ -107,6 +125,11 @@ strong {
 
 textarea {
 	resize:none;
+}
+
+time {
+	font-size:10px;
+	color:lightgray;
 }
 
 .badge {
@@ -278,11 +301,11 @@ footer > .footer-bar {
 
 .feed-right-scroll-container > ul > li > header {
 	color:black;
-	border:1px solid black;
-	border-radius: 10px;
+	border-bottom:1px solid lightgray;
 	background-color:rgba(255,255,255,.75);
 	float:left;
 	width:150px;
+	margin-bottom:10px;
 }
 
 .feed-right-scroll-container > ul > li > header >.news {
@@ -309,6 +332,15 @@ footer > .footer-bar {
 	height:480px;
 }
 
+.mini-window > .comments {
+	float:right;
+	width:360px;
+}
+
+.resolution > .statement {
+	height:56px;
+}
+
 .mini-window-scroll-container {
 	height:100%;
 	width:100%;
@@ -329,6 +361,8 @@ footer > .footer-bar {
 	font-weight:bold;
 	color:black;
 	margin-bottom:10px;
+	padding-bottom:5px;
+	border-bottom:1px solid lightgray;
 }
 
 .scroll-content > .resolution-list {
@@ -341,9 +375,8 @@ footer > .footer-bar {
 }
 
 .scroll-content > .resolution-list > .mini-window {
-	height:85px;
 	margin: 0px 10px;
-	margin-bottom: 50px;
+	margin-bottom: 5px;
 	width:501px;
 }
 
@@ -399,6 +432,9 @@ footer > .footer-bar {
 	margin-right: 4px ;
 }
 
+.info > li > a {
+	color:lightgray;
+}
 
 .scroll-content > .resolution-list > .mini-window > .header > .resolution > .statement {
 	padding-top:5px;
@@ -471,10 +507,9 @@ footer > .footer-bar {
 }
 
 .navbar > .left-menu > li > .nav-dropdown{
-	margin-top:10px;
+	margin-top:11px;
 	position:absolute;
 	color:black;
-	border-radius:10px;
 }
 
 .navbar > .left-menu > li > .notifications-list {
@@ -484,6 +519,7 @@ footer > .footer-bar {
 
 .navbar > .left-menu > li > .requests-list {
 	display:none;
+	background-color: rgba(207,249,234,.9);
 }
 
 /*.navbar > .left-menu > li:hover > .nav-dropdown{
@@ -497,10 +533,11 @@ footer > .footer-bar {
 
 .navbar > .left-menu > li > .nav-dropdown > li > .message {
 	padding:10px;
+	background-color: rgba(207,249,234,.9);
 }
 
 .navbar > .left-menu > li > .nav-dropdown > li > .message > a{
-	color:white;
+	color:black;
 }
 
 .navbar > .left-menu > li > .nav-dropdown > li > form {

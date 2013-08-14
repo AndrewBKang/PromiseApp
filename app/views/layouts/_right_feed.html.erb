@@ -6,7 +6,7 @@
 				<li>
 					<figure><%= link_to(image_tag(activity[:picture]),user_url(activity[:user_id])) %></figure>
 					<h4><%= link_to(activity[:username],user_url(activity[:user_id])) %></h4>
-					<header class="cut-out">
+					<header>
 						<div class="news">
 							<%= "made a new #{activity[:type]} "%> 
 							<%= link_to("'#{activity[:title]}'", resolution_url(activity[:activity_id]))%>

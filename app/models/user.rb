@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
   
   def feed
     activities = FriendActivity.feed(self)
-    activities.map { |friend_activity| {title: friend_activity.activity.title,
+    activities.map { |friend_activity| {
                                         username: friend_activity.activity.user.username,
                                         picture: friend_activity.activity.user.profile_photo.url(:thumb),
                                         type: friend_activity.activity_type, 

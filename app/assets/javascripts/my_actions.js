@@ -23,11 +23,11 @@ $(document).ready(function(){
 		minHeight: 35
 	});
 	
-	$('.mini-window').resizable({
-		maxWidth: 501,
-		minWidth: 501,
+	$('.resolution > .statement').resizable({
+		maxWidth: 400,
+		minWidth: 400,
 		maxHeight: 480,
-		minHeight: 85
+		minHeight: 56
 	});
 	
 	$('.feed-right').resizable({
