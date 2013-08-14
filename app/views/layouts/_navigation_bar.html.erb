@@ -1,16 +1,16 @@
 <% if user_signed_in?%>
 <header class="nav clearfix">
-	<div class="navbar">
+	<div class="navbar clearfix">
 		<ul class="left-menu">
 			<li><%= link_to("logo", resolutions_url) %></li>
 			<li>
-				<a href="#">
+				<a class="request-tab" href="#">
 					friend requests 
 					<% if current_user.friend_requests.length > 0 %>
 						<strong class="badge"><%= current_user.friend_requests.length %></strong> 
 					<% end %>
 				</a>
-				<ul class="nav-dropdown bubble clearfix">
+				<ul class="nav-dropdown requests-list bubble clearfix">
 					<% current_user.friend_requests.each do |request| %>
 						<li>
 							<div class="name"><%= link_to(request[:friendname],user_url(request[:user_id])) %></div>
@@ -27,7 +27,7 @@
 						<strong class="badge"><%= note_count %></strong>
 					<% end %>
 				</a>
-				<ul class="nav-dropdown bubble clearfix">
+				<ul class="nav-dropdown notifications-list bubble clearfix">
 					<% current_user.notifications.reverse.each do |note| %>
 						<li>
 							<div class="message">

@@ -11,6 +11,7 @@
 	
 	<%= render :partial => 'layouts/navigation_bar' %>
 	
+	
 	<div class="content clearfix">
 		<p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p>		
@@ -19,6 +20,16 @@
 		<%= render :partial => '/layouts/profile' if user_signed_in?%>
 		<%= yield %>
 	</div>
+	
+	<footer>
+		<div class="footer-bar">
+			<div>PromiseApp &copy; 2013
+			<% unless Time.now.year == 2013 %>
+			- <%= Time.now.year %>
+			<% end %></div>
+		</div>
+	</footer>
+	
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 </body>

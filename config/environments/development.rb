@@ -6,9 +6,9 @@ PromiseApp::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => 'promise_app_development',
-      :access_key_id => 'AKIAIV7LFUDMY2WKEYZA',
-      :secret_access_key => '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'
+      :bucket => ENV["PAPERCLIP_BUCKET"],
+      :access_key_id => ENV["PAPERCLIP_ACCESS_KEY_ID"],
+      :secret_access_key => ENV["PAPERCLIP_SECRET_ACCESS_KEY"]
     }
   }
 

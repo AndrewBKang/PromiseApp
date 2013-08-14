@@ -27,6 +27,10 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'figaro'
+
+gem 'kaminari'
+
 gem 'jquery-rails'
 
 gem 'paperclip'

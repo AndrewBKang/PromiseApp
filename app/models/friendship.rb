@@ -4,7 +4,7 @@ class Friendship < ActiveRecord::Base
   belongs_to :user
   belongs_to :friend, class_name: 'User', foreign_key: 'friend_id'
   
-  has_many :notifications, as: :activity
+  has_many :notifications, as: :activity, dependent: :destroy
   
   validates_uniqueness_of :user_id, :scope => :friend_id
   

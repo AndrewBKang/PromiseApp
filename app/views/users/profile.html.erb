@@ -7,7 +7,6 @@
 <script>
 
 	$('#new_resolution').on("ajax:success", function(event,data){
-		console.log($('.resolution-list'))
 		$('.resolution-list').prepend(data);
 		$('#resolution_title').val('');
 		$('#resolution_body').val('');

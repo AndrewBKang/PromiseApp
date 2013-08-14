@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130809144815) do
+ActiveRecord::Schema.define(:version => 20130814143859) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "body"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "user_id"
+  end
 
   create_table "friend_activities", :force => true do |t|
     t.integer  "activity_id"
@@ -29,6 +38,14 @@ ActiveRecord::Schema.define(:version => 20130809144815) do
     t.integer  "status"
   end
 
+  create_table "likes", :force => true do |t|
+    t.string   "user_id"
+    t.integer  "likeable_id"
+    t.string   "likeable_type"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "notifications", :force => true do |t|
     t.integer  "user_id"
     t.integer  "activity_id"
@@ -40,7 +57,6 @@ ActiveRecord::Schema.define(:version => 20130809144815) do
   end
 
   create_table "resolutions", :force => true do |t|
-    t.string   "title"
     t.text     "body"
     t.integer  "user_id"
     t.datetime "created_at", :null => false

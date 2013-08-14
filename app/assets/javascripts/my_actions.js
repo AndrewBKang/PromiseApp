@@ -32,7 +32,7 @@ $(document).ready(function(){
 	
 	$('.feed-right').resizable({
 		maxHeight:480,
-		minHeight:150,
+		minHeight:55,
 		maxWidth:190,
 		minWidth:190
 	});
@@ -42,8 +42,12 @@ $(document).ready(function(){
 		handle: 'h3'
 	});
 	
-	$('.navbar > .left-menu > li > a').on('click', function(event){
-		$('.nav-dropdown').toggle();
+	$('.navbar > .left-menu > li > .request-tab').on('click', function(event){
+		$('.requests-list').toggle();
+	});
+	
+	$('.navbar > .left-menu > li > .notification-tab').on('click', function(event){
+		$('.notifications-list').toggle();
 	});
 	
 	$('.page-navbar > li > a').on('click', function(event){

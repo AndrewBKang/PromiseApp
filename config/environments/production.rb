@@ -7,8 +7,8 @@ PromiseApp::Application.configure do
     :address        => "smtp.sendgrid.net",
     :port           => "25",
     :authentication => :plain,
-    :user_name      => ENV['app17376169'],
-    :password       => ENV['x5mrpbup'],
+    :user_name      => ENV["SENDGRID_USER_NAME"],
+    :password       => ENV["SENDGRID_PASSWORD"],
     :domain         => 'heroku.com'
   }
 
@@ -37,9 +37,9 @@ PromiseApp::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => 'promise_app_production',
-      :access_key_id => 'AKIAIV7LFUDMY2WKEYZA',
-      :secret_access_key => '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'
+      :bucket => ENV["PAPERCLIP_BUCKET"],
+      :access_key_id => ENV["PAPERCLIP_ACCESS_KEY_ID"],
+      :secret_access_key => ENV["PAPERCLIP_SECRET_ACCESS_KEY"]
     }
   }
   

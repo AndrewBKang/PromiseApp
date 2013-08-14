@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are: :confirmable 
+  # Include default devise modules. Others available are:
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, 
-         :token_authenticatable, :lockable, 
+         :token_authenticatable, :lockable, :confirmable,
          :timeoutable and :omniauthable
 
   # Setup accessible (or protected) attributes for your model
@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :friendships
   has_many :friends, through: :friendships, source: :friend
   has_many :notifications
+  has_many :comments
   
   has_attached_file :profile_photo, :styles => {
     :big => "150x150#",
