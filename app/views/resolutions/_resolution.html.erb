@@ -6,10 +6,3 @@
 	<%= render resolution.comments %>
 	</ul>
 </li>
-
-<script>
-$('.new_comment').on("ajax:success", function(event,data){
-	$(this).parent().siblings('.comments').append(data)
-});
-
-</script>

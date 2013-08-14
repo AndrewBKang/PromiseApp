@@ -139,6 +139,8 @@ time {
 	border-radius:10px;
 }
 
+/* comment form */
+
 /* SideBar */
 
 .left {
@@ -330,11 +332,14 @@ footer > .footer-bar {
 	margin-bottom:25px;
 	overflow:hidden;
 	height:480px;
+	border-bottom:1px solid lightgray;
 }
 
 .mini-window > .comments {
 	float:right;
 	width:360px;
+	padding:10px 0;
+	display:none;
 }
 
 .resolution > .statement {
@@ -378,6 +383,7 @@ footer > .footer-bar {
 	margin: 0px 10px;
 	margin-bottom: 5px;
 	width:501px;
+	border-bottom:1px solid lightgray;
 }
 
 .scroll-content > .resolution-list > .mini-window > .header {

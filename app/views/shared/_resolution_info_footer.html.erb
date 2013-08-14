@@ -1,6 +1,6 @@
 <div class="mini-footer clearfix">
 	<ul class="links clearfix">
-		<li><a href="#"> <%= resolution.comments.count %> comments </a></li>
+		<li class="show-comment"><a href="#"> <%= resolution.comments.count %> comments </a></li>
 		<li><a href="#"> -5 likes </a></li>
 		<li><a href="#"> 0 dislikes </a></li>
 		<li><a href="#">like</a></li>
@@ -12,7 +12,9 @@
 		<%= f.hidden_field :commentable_id %>
 		<%= hidden_field_tag 'comment[commentable_id]', resolution.id %>
 		<%= f.hidden_field :commentable_type %>
-		<%= hidden_field_tag 'comment[commentable_type]', resolution.class.name %>
+		<%= hidden_field_tag 'comment[commentable_type]',
+		 resolution.class.name %>
+		<%= f.submit class: 'comment-submit' %>
 	<% end %>
 	</div>
 </div>

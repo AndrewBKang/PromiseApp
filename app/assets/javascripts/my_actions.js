@@ -54,4 +54,10 @@ $(document).ready(function(){
 		$('.resolution_form').toggle();
 	});
 	
+	
+	$('.show-comment > a').on('click', function(event){
+		$(this).closest('.mini-window').find('.comments').toggle();
+	});
+
+	
 });

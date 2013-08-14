@@ -9,6 +9,11 @@
 <script>
 	
 
+	$('.new_comment').on("ajax:success", function(event, data){
+		$(this).parent().parent().siblings(".comments").append(data);
+		$('#comment_body').val('');
+	});
+
   var page = 1;
   var loading = false;
   function nearBottomOfPage() {
@@ -35,11 +40,10 @@
 	  }
   });
 	
-	$('textarea').keydown(function(event) {
-		if (event.keyCode == 13) {
-			this.form.submit();
-			return false;
-		}
-	});
+	// $('textarea').keydown(function(event) {
+	// 	if (event.keyCode == 13) {
+	// 		this.form.submit()
+	// 	}
+	// });
 
 </script>
