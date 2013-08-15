@@ -1,18 +1,18 @@
 PromiseApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   
-  config.action_mailer.default_url_options = { :host => 'http://o-ma-gersh-ish-mah-app.herokuapp.com/' }
+  # config.action_mailer.default_url_options = { :host => 'http://o-ma-gersh-ish-mah-app.herokuapp.com/' }
   
-  ActionMailer::Base.smtp_settings = {
-    :address        => "smtp.sendgrid.net",
-    :port           => "25",
-    :authentication => :plain,
-    :user_name      => ENV["SENDGRID_USER_NAME"],
-    :password       => ENV["SENDGRID_PASSWORD"],
-    :domain         => 'heroku.com'
-  }
-  
-  ActionMailer::Base.delivery_method ||= :smtp
+  # ActionMailer::Base.smtp_settings = {
+  #   :address        => "smtp.sendgrid.net",
+  #   :port           => "25",
+  #   :authentication => :plain,
+  #   :user_name      => ENV["SENDGRID_USER_NAME"],
+  #   :password       => ENV["SENDGRID_PASSWORD"],
+  #   :domain         => 'heroku.com'
+  # }
+  # 
+  # ActionMailer::Base.delivery_method ||= :smtp
 
   # Code is not reloaded between requests
   config.cache_classes = true
