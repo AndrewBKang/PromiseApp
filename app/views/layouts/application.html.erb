@@ -13,11 +13,12 @@
 	
 	
 	<div class="content clearfix">
-		<p class="notice"><%= notice %></p>
+		<% if user_signed_in? %>
+		<p class="notice"><%= notice %></p> 
 		<p class="alert"><%= alert %></p>		
-		<%= render :partial => '/layouts/right_feed' if user_signed_in?%>
-		<div class="profile-container">
-		<%= render :partial => '/layouts/profile' if user_signed_in?%>
+		<%= render :partial => '/layouts/right_feed'%>
+		<%= render :partial => '/layouts/profile'%>
+		<% end %>
 		<%= yield %>
 	</div>
 	
