@@ -22,16 +22,15 @@
 		<%= yield %>
 	</div>
 	
-	<footer>
-		<div class="footer-bar">
-			<div>PromiseApp &copy; 2013
-			<% unless Time.now.year == 2013 %>
-			- <%= Time.now.year %>
-			<% end %></div>
-		</div>
-	</footer>
-	
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 </body>
+<footer>
+	<div class="footer-bar">
+		<div>PromiseApp &copy; 2013
+		<% unless Time.now.year == 2013 %>
+		- <%= Time.now.year %>
+		<% end %></div>
+	</div>
+</footer>
 </html>

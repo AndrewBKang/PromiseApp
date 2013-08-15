@@ -317,7 +317,7 @@ footer > .footer-bar {
 
 .feed-right-scroll-container > ul > li > h4 > a{
 	float:left;
-	color:black;
+	color:#10BA8F;
 	padding-left:10px;
 }
 
@@ -332,6 +332,10 @@ footer > .footer-bar {
 
 .feed-right-scroll-container > ul > li > header >.news {
 	padding:5px;
+}
+
+.news > a {
+	color:#10BA8F;
 }
 
 /* middle container body */
@@ -410,9 +414,7 @@ footer > .footer-bar {
 	height:100%;
 	margin-left:91px;
 	width:410px;
-	overflow:scroll;
 	background-color:rgba(255,255,255,.75);
-	border-bottom:1px solid lightgray;
 }
 
 .scroll-content > .resolution-list > .mini-window > .friends-profile {
@@ -437,7 +439,11 @@ footer > .footer-bar {
 	float:right;
 	width:400px;
 	padding:10px;
-	padding-left:none;
+	padding-bottom:0;
+	border-bottom:1px solid lightgray;
+	overflow:hidden;
+	height:40px;
+	margin-bottom:2px;
 }
 
 .scroll-content > .resolution-list > .mini-window > .header > .resolution > .title > h4 {
@@ -464,6 +470,8 @@ footer > .footer-bar {
 
 .scroll-content > .resolution-list > .mini-window > .header > .resolution > .statement {
 	padding-top:5px;
+	overflow:scroll;
+	height:100%;
 }
 
 .scroll-content > .resolution-list > .mini-window > .mini-footer {
@@ -474,7 +482,11 @@ footer > .footer-bar {
 .scroll-content > .resolution-list > .mini-window > .mini-footer > .comment > .new_comment {
 	float:right;
 	width:315px;
-	padding-bottom:10px;
+	padding-bottom:2px;
+}
+
+.comment-submit {
+	display:none;
 }
 
 .scroll-content > .resolution-list > .mini-window > .mini-footer > .links {

@@ -11,13 +11,14 @@ PromiseApp::Application.routes.draw do
   resources :users
   resources :resolutions
   resources :friendships, only: [:create,:destroy,:update]
-  
   resources :comments, only: [:create, :destroy]
+  resources :updates, only: [:create, :destroy]
   
   match 'read/:count' => 'notifications#read', as: :read
-  
   match 'profile' => 'users#profile'
-
+  
+  
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

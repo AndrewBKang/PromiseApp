@@ -7,13 +7,13 @@
 </div>
 
 <script>
-	
 
 	$('.new_comment').on("ajax:success", function(event, data){
+		console.log('gothere')
+		$(this).find('#comment_body').val('');
+		var commentCount = $(this).first().parent().parent().find('.comments-count');
+		commentCount.text(parseInt(commentCount.text())+1);
 		$(this).parent().parent().siblings(".comments").append(data);
-		$('#comment_body').val('');
-		var commentCount = $('.new_comment').first().parent().parent().find('.comments-count');
-		commentCount.text(parseInt(commentCount.text())+1)
 	});
 
   var page = 1;
@@ -44,8 +44,8 @@
 	
 	$('textarea').keydown(function(event) {
 		if (event.keyCode == 13) {
-			console.log('hey');
-			$(this).closest('form').find('input[type="submit"]')).click();
+			event.preventDefault();
+			$(this).closest('form').find('input[type="submit"]').click();
 		}
 	});
 

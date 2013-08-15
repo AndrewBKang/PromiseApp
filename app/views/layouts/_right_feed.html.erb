@@ -8,8 +8,8 @@
 					<h4><%= link_to(activity[:username],user_url(activity[:user_id])) %></h4>
 					<header>
 						<div class="news">
-							<%= "made a new #{activity[:type]} "%> 
-							<%= link_to("'#{activity[:title]}'", resolution_url(activity[:activity_id]))%>
+							<%= "made a new " %>
+							<%= link_to(activity[:type], resolution_url(activity[:activity_id]))%>
 						</div>
 					</header>
 				</li>

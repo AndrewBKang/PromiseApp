@@ -10,14 +10,6 @@
 		<li><a href="#">like</a></li>
 	</ul>
 	<div class="comment">
-	<%= form_for(Comment.new, remote: true) do |f| %>
-		<%= f.text_area :body, size: '41x1', placeholder: 'comment here...' %>
-		<%= f.hidden_field :commentable_id %>
-		<%= hidden_field_tag 'comment[commentable_id]', resolution.id %>
-		<%= f.hidden_field :commentable_type %>
-		<%= hidden_field_tag 'comment[commentable_type]',
-		 resolution.class.name %>
-		<%= f.submit class: 'comment-submit' %>
-	<% end %>
+	<%= render :partial => 'shared/comment_form', locals: {resolution: resolution} %>
 	</div>
 </div>

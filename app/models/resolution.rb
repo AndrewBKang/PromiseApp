@@ -5,5 +5,6 @@ class Resolution < ActiveRecord::Base
   has_many :friend_activities, as: :activity, dependent: :destroy
   has_many :comments, as: :commentable, dependent: :destroy
   has_many :likes, as: :likeable, dependent: :destroy
+  has_many :updates, as: :updateable, dependent: :destroy
   
 end

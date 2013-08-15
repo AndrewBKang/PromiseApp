@@ -23,11 +23,11 @@ $(document).ready(function(){
 		minHeight: 35
 	});
 	
-	$('.resolution > .statement').resizable({
+	$('.resolution').resizable({
 		maxWidth: 400,
 		minWidth: 400,
 		maxHeight: 480,
-		minHeight: 56
+		minHeight: 40
 	});
 	
 	$('.feed-right').resizable({
