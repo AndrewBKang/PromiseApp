@@ -17,8 +17,6 @@ PromiseApp::Application.routes.draw do
   match 'read/:count' => 'notifications#read', as: :read
   match 'profile' => 'users#profile'
   
-  
-  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

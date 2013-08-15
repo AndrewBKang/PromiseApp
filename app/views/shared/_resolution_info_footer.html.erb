@@ -1,4 +1,11 @@
 <div class="mini-footer clearfix">
+	<ul class="left-list">
+		<% if resolution.user.id == current_user.id%>
+			<li><a href="#">update</a></li>
+		<% else %>
+			<li><a class="like-button" href="#">like</a></li>
+		<% end %>
+	</ul>
 	<ul class="links clearfix">
 		<li class="show-comment">
 			<a href="#"> 
@@ -7,7 +14,6 @@
 		</li>
 		<li><a href="#">10 updates</a></li>
 		<li><a href="#"> -5 likes </a></li>
-		<li><a href="#">like</a></li>
 	</ul>
 	<div class="comment">
 	<%= render :partial => 'shared/comment_form', locals: {resolution: resolution} %>

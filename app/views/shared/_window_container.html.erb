@@ -25,3 +25,20 @@
 	</div>
 
 </ul>
+
+<script>
+	$('textarea').keydown(function(event) {
+		if (event.keyCode == 13) {
+			event.preventDefault();
+			$(this).closest('form').find('input[type="submit"]').click();
+		}
+	});
+	
+	$('.new_comment').on("ajax:success", function(event, data){
+		console.log('gothere');
+		$(this).find('#comment_body').val('');
+		var commentCount = $(this).first().parent().parent().find('.comments-count');
+		commentCount.text(parseInt(commentCount.text())+1);
+		$(this).parent().parent().siblings(".comments").append(data);
+	});
+</script>

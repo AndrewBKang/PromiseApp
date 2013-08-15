@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   
   def profile
     @resolution = Resolution.new
-    @resolutions = Resolution.where(user_id: current_user.id).order("id DESC")
+    @resolutions = Resolution.where(user_id: current_user.id).order("id DESC").page(params[:page])
+    render @resolutions if request.xhr?
   end
   
   def show

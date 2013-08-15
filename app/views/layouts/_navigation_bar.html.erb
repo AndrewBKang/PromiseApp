@@ -54,15 +54,15 @@
 <% end %>
 
 <script>
-	
-	$('.button_to').on("ajax:success", function(event){
-		$(event.target).parent().addClass('friended');
-		var $badge = $('.badge');
-		($badge.text() == 1) ? $badge.addClass('friended') : $badge.text($badge.text()-1)
-	});
-	
-	$('.notification-tab').on("ajax:success", function(){
-		$('.badge').hide();
-	});
-	
+
+$('.button_to').on("ajax:success", function(event){
+	$(event.target).parent().addClass('friended');
+	var $badge = $('.badge');
+	($badge.text() == 1) ? $badge.addClass('friended') : $badge.text($badge.text()-1)
+});
+
+$('.notification-tab').on("ajax:success", function(){
+	$('.badge').hide();
+});
+
 </script>

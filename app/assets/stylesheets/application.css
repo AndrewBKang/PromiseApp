@@ -489,17 +489,46 @@ footer > .footer-bar {
 	display:none;
 }
 
+.mini-footer > .left-list {
+	float:left;
+	width:40px;
+	margin-left:18px;
+	padding:2px;
+}
+
+.left-list > li > a {
+	color:white;
+	padding:2px;
+	background-color:#10BA8F;
+}
+
+.left-list > li > a:hover {
+	color:lightgray;
+}
+
 .scroll-content > .resolution-list > .mini-window > .mini-footer > .links {
 	float:right;
+	padding:1px;
 }
 
 .scroll-content > .resolution-list > .mini-window > .mini-footer > .links > li {
 	float:left;
-	margin-right: 4px;
+	padding-right:7px;
 }
 
-.scroll-content > .resolution-list > .mini-window > .mini-footer > .links > li > a {
+.mini-footer > .links > li > a {
 	color:black;
+}
+
+.mini-footer > .links > li > a:hover {
+	color:darkgray;
+}
+
+.left-list > li > .like-button {
+	background-color: rgba(207,249,234,.9);
+	padding:1px 4px;
+	color:#10BA8F;
+	border:1px solid #10BA8F;
 }
 
 /* Navigation Bar */
@@ -509,28 +538,21 @@ footer > .footer-bar {
 	position:fixed;
 	width:100%;
 	background: rgb(255,255,255); /* Old browsers */
-
 	background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(201,234,224,1) 49%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(49%,rgba(201,234,224,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-
 	background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(201,234,224,1) 49%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-
 	background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(201,234,224,1) 49%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-
 	background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(201,234,224,1) 49%,rgba(255,255,255,1) 100%); /* IE10+ */
-
 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(201,234,224,1) 49%,rgba(255,255,255,1) 100%); /* W3C */
-
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-
-	}
+}
 
 .friended {
 	display:none;
 }
 
 .navbar {
+	display:block;
 	width: 1000px;
 	margin:auto;
 	border-bottom:2px solid black;
