@@ -338,7 +338,7 @@ footer > .footer-bar {
 .mini-window > .comments {
 	float:right;
 	width:360px;
-	padding:10px 0;
+	padding-bottom:10px;
 	display:none;
 }
 
@@ -454,6 +454,7 @@ footer > .footer-bar {
 .scroll-content > .resolution-list > .mini-window > .mini-footer > .comment > .new_comment {
 	float:right;
 	width:315px;
+	padding-bottom:10px;
 }
 
 .scroll-content > .resolution-list > .mini-window > .mini-footer > .links {

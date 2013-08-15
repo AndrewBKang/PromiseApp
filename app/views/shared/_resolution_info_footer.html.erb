@@ -1,10 +1,13 @@
 <div class="mini-footer clearfix">
 	<ul class="links clearfix">
-		<li class="show-comment"><a href="#"> <%= resolution.comments.count %> comments </a></li>
+		<li class="show-comment">
+			<a href="#"> 
+				<span class="comments-count"><%= resolution.comments.count %></span> comments 
+			</a>
+		</li>
+		<li><a href="#">10 updates</a></li>
 		<li><a href="#"> -5 likes </a></li>
-		<li><a href="#"> 0 dislikes </a></li>
 		<li><a href="#">like</a></li>
-		<li><a href="#">dislike</a></li>
 	</ul>
 	<div class="comment">
 	<%= form_for(Comment.new, remote: true) do |f| %>

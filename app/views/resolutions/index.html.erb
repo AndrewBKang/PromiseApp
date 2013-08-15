@@ -12,6 +12,8 @@
 	$('.new_comment').on("ajax:success", function(event, data){
 		$(this).parent().parent().siblings(".comments").append(data);
 		$('#comment_body').val('');
+		var commentCount = $('.new_comment').first().parent().parent().find('.comments-count');
+		commentCount.text(parseInt(commentCount.text())+1)
 	});
 
   var page = 1;
@@ -40,10 +42,11 @@
 	  }
   });
 	
-	// $('textarea').keydown(function(event) {
-	// 	if (event.keyCode == 13) {
-	// 		this.form.submit()
-	// 	}
-	// });
+	$('textarea').keydown(function(event) {
+		if (event.keyCode == 13) {
+			console.log('hey');
+			$(this).closest('form').find('input[type="submit"]')).click();
+		}
+	});
 
 </script>
