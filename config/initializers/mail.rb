@@ -2,7 +2,7 @@ if Rails.env.production?
   # only send emails for real in prod
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
-    :port           => '587',
+    :port           => '25',
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USER_NAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
