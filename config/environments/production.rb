@@ -11,6 +11,8 @@ PromiseApp::Application.configure do
     :password       => ENV["SENDGRID_PASSWORD"],
     :domain         => 'heroku.com'
   }
+  
+  ActionMailer::Base.delivery_method ||= :smtp
 
   # Code is not reloaded between requests
   config.cache_classes = true
