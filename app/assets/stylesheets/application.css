@@ -305,22 +305,23 @@ footer > .footer-bar {
 	width:100%;
 }
 
-.feed-right-scroll-container > ul {
+.feed-right > ul {
 	margin:20px;
+	margin-top:5px;
 }
 
-.feed-right-scroll-container > ul > li > figure {
+.feed-right > ul > div > li > figure {
 	float:left;
 	width:25px;
 }
 
-.feed-right-scroll-container > ul > li > h4 > a{
+.feed-right > ul > div > li > h4 > a{
 	float:left;
 	color:#10BA8F;
 	padding-left:10px;
 }
 
-.feed-right-scroll-container > ul > li > header {
+.feed-right > ul > div > li > header {
 	color:black;
 	border-bottom:1px solid lightgray;
 	background-color:rgba(255,255,255,.75);
@@ -329,7 +330,7 @@ footer > .footer-bar {
 	margin-bottom:10px;
 }
 
-.feed-right-scroll-container > ul > li > header >.news {
+.feed-right > ul > div > li > header >.news {
 	padding:5px;
 }
 
@@ -385,9 +386,10 @@ footer > .footer-bar {
 	color:black;
 }
 
-.feed-right-scroll-container > ul > h3 {
+.feed-right > h3 {
 	font-weight:bold;
 	color:black;
+	margin:20px;
 	margin-bottom:10px;
 	padding-bottom:5px;
 	border-bottom:1px solid lightgray;

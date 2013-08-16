@@ -30,11 +30,11 @@ $(document).ready(function(){
 		minHeight: 40
 	});
 	
-	$('.feed-right').resizable({
+	$('.feed-right > ul').resizable({
 		maxHeight:480,
 		minHeight:55,
-		maxWidth:190,
-		minWidth:190
+		maxWidth:150,
+		minWidth:150
 	});
 	
 	$('.window-container-list').sortable({

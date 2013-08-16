@@ -1,19 +1,19 @@
 <aside class="feed-right glow">
-	<div class="feed-right-scroll-container">
-		<ul>
-			<h3>Friend Activity</h3>
-			<% current_user.feed.each do |activity| %>
-				<li>
-					<figure><%= link_to(image_tag(activity[:picture]),user_url(activity[:user_id])) %></figure>
-					<h4><%= link_to(activity[:username],user_url(activity[:user_id])) %></h4>
-					<header>
-						<div class="news">
-							<%= "made a new " %>
-							<%= link_to(activity[:type], resolution_url(activity[:activity_id]))%>
-						</div>
-					</header>
-				</li>
-			<% end %>
-		</ul>
-	</div>
+	<h3>Friend Activity</h3>
+	<ul>
+		<div class="feed-right-scroll-container">
+		<% current_user.feed.each do |activity| %>
+			<li>
+				<figure><%= link_to(image_tag(activity[:picture]),user_url(activity[:user_id])) %></figure>
+				<h4><%= link_to(activity[:username],user_url(activity[:user_id])) %></h4>
+				<header>
+					<div class="news">
+						<%= "made a new " %>
+						<%= link_to(activity[:type], resolution_url(activity[:activity_id]))%>
+					</div>
+				</header>
+			</li>
+		<% end %>
+		</div>
+	</ul>
 </aside>
