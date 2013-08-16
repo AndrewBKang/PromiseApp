@@ -38,5 +38,11 @@
 		$('#resolution_body').val('');
 		$('.resolution_form').hide();
 	});
+	
+	$('#new_resolution').on("ajax:success", function(event,data){
+		$('.resolution-list').prepend(data);
+		$('#user_profile_photo').val('');
+		$('.new_pic_form').hide();
+	});
 
 </script>

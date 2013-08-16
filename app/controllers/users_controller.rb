@@ -22,4 +22,10 @@ class UsersController < ApplicationController
     @friendship_id = @existing_friendship.id if @approved_friends
   end
   
+  def update
+    current_user.profile_photo = params[:user][:profile_photo]
+    current_user.save
+    redirect_to :profile
+  end
+  
 end

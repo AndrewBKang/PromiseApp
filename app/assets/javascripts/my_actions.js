@@ -50,8 +50,12 @@ $(document).ready(function(){
 		$('.notifications-list').toggle();
 	});
 	
-	$('.page-navbar > li > a').on('click', function(event){
+	$('.page-navbar > li > .new_res').on('click', function(event){
 		$('.resolution_form').toggle();
+	});
+	
+	$('.page-navbar > li > .new_pic').on('click', function(event){
+		$('.new_pic_form').toggle();
 	});
 	
 	$('.resolution-list').on('click','.show-comment > a', function(event){
@@ -61,5 +65,7 @@ $(document).ready(function(){
 	$('.resolution-list').on('click', '.update-button', function(event){
 		$(this).parent().find('.update-form').toggle();
 	});
+	
+	$('.')
 	
 });

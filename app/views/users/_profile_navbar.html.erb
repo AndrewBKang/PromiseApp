@@ -1,8 +1,19 @@
 <header class="profile-navbar glow">
 	<ul class="page-navbar clearfix">
-		<li><a href="#">change profile pic</a></li>
 		<li>
-			<a href="#">create resolution</a>
+			<a href="#" class="new_pic">change profile pic</a>
+			<div class="new_pic_form bubble">
+				<%= form_for current_user do |f| %>
+					<div class="inputs">
+						<div class="update-picture"><%= f.label :profile_photo %><br>
+						<%= f.file_field :profile_photo %></div>
+					  <%= f.submit "Upload new pic" %>
+					</div>
+				<% end %>
+			</div>
+		</li>
+		<li>
+			<a href="#" class="new_res">create resolution</a>
 			<%= render :partial => 'resolution_form' %>
 		</li>
 		<li><a href="#">update resoultion</a></li>
