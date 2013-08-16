@@ -54,9 +54,12 @@ $(document).ready(function(){
 		$('.resolution_form').toggle();
 	});
 	
+	$('.resolution-list').on('click','.show-comment > a', function(event){
+		$(event.target).closest('.mini-window').find('.comments').toggle();
+	});
 	
-	$('.show-comment > a').on('click', function(event){
-		$(this).closest('.mini-window').find('.comments').toggle();
+	$('.resolution-list').on('click', '.update-button', function(event){
+		$(this).parent().find('.update-form').toggle();
 	});
 	
 });

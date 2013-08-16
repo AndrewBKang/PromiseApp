@@ -15,7 +15,7 @@ class ResolutionsController < ApplicationController
     @resolution.friend_activities.create
     
     if request.xhr?
-      render partial: @resolution
+      render @resolution
     else
       redirect_to profile_url
     end

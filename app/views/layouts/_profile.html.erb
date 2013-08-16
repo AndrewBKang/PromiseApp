@@ -15,32 +15,3 @@
 		</table>
 	</section>
 </section>
-
-<script>
-var page = 1;
-var url = "profile/?page=";
-var loading = false;
-function nearBottomOfPage() {
-  return $(".mini-window-scroll-container").scrollTop() > 						$('.scroll-content').height() - 						$('.mini-window-scroll-container').height() - 200;
-}
-$('.mini-window-scroll-container').scroll(function(){
-	if(nearBottomOfPage() && !loading && (page <= <%= @resolutions.total_pages %>) ) {
-    loading=true;
-    page += 1;
-		$.ajaxSetup({
-			beforeSend: function(){
-				$('.loader-container').show();
-			},
-			complete:function(){
-				$('.loader-container').hide();
-			}
-		});
-    $.ajax({url: url + page}).done(
-			function(data) {
-				loading=false
-				$('.resolution-list').append(data)
-			}
-		) 
-  }
-});
-</script>

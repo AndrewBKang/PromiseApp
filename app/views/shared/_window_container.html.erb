@@ -27,15 +27,14 @@
 </ul>
 
 <script>
-	$('textarea').keydown(function(event) {
+	$('.resolution-list').on('keydown', 'textarea' ,function(event) {
 		if (event.keyCode == 13) {
 			event.preventDefault();
 			$(this).closest('form').find('input[type="submit"]').click();
 		}
 	});
 	
-	$('.new_comment').on("ajax:success", function(event, data){
-		console.log('gothere');
+	$('.resolution-list').on("ajax:success", '.new_comment', function(event, data){
 		$(this).find('#comment_body').val('');
 		var commentCount = $(this).first().parent().parent().find('.comments-count');
 		commentCount.text(parseInt(commentCount.text())+1);
