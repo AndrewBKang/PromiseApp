@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   
   def show
     @friendship = Friendship.new
-    @resolutions = Resolution.where(user_id: params[:id]).order("id DESC")
+    @resolutions = Resolution.includes({comments: :user}, :user).where(user_id: params[:id]).order("id DESC")
     user = User.find(params[:id])
     @profile_pic = user.profile_photo.url(:small)
     @username = user.username
