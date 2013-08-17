@@ -154,8 +154,9 @@ time {
 .badge {
 	font-size:10px;
 	padding:2px 5px;
-	background:rgba(255,255,255,.2);
+	background:#10BA8F;
 	border-radius:10px;
+	color:white;
 }
 
 /* comment form */
@@ -259,6 +260,10 @@ footer > .footer-bar {
 	
 }
 
+.footer-bar > .logo {
+	width:100px;
+}
+
 /* profile */
 
 
@@ -279,14 +284,16 @@ footer > .footer-bar {
 .profile > figure {
 	float:left;
 	padding:16px;
-	padding-top:20px;
 }
 
 .profile > .user-info {
-	margin: 20px;
-	margin-left:0;
+	margin:16px;
 	margin-bottom:0;
-	color:black;
+}
+
+.user-info > tbody > .username > td {
+	font-size:15px;
+	color:#10BA8F;
 }
 
 /* friend feed right */
@@ -294,7 +301,6 @@ footer > .footer-bar {
 .feed-right {
 	margin-top:50px;
 	width:20%;
-	height-max:480px;
 	float:right;
 	border-radius:10px;
 }
@@ -308,6 +314,7 @@ footer > .footer-bar {
 .feed-right > ul {
 	margin:20px;
 	margin-top:5px;
+	height:75px;
 }
 
 .feed-right > ul > div > li > figure {
@@ -392,7 +399,7 @@ footer > .footer-bar {
 	margin:20px;
 	margin-bottom:10px;
 	padding-bottom:5px;
-	border-bottom:1px solid lightgray;
+	border-bottom:1px solid darkgray;
 }
 
 .scroll-content > .resolution-list {
@@ -600,6 +607,10 @@ footer > .footer-bar {
 /*.navbar > .left-menu > li:hover > .nav-dropdown{
 	display:block;
 }*/
+
+.nav-dropdown > li {
+	float:left;
+}
 
 .navbar > .left-menu > li > .nav-dropdown > li > .name {
 	padding:10px;

@@ -2,11 +2,9 @@ class ResolutionsController < ApplicationController
   
   before_filter :authenticate_user!
   
-  # GET /posts
-  # GET /posts.json
   def index
     @comment = Comment.new
-    @resolutions = Resolution.order('id DESC').page(params[:page])
+    @resolutions = Resolution.includes({comments: :user}, :user).order('id DESC').page(params[:page])
     render @resolutions if request.xhr?
   end
   

@@ -3,15 +3,13 @@
 	<figure>
 		<%= image_tag current_user.profile_photo.url(:big) %>
 	</figure>
-	<section class="user-info">
-		<table>
-			<tr class="username">
-				<td><%= current_user.username %></td>
-			</tr>
-			<tr class="characteristic">
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</section>
+	<table class="user-info">
+		<tr class="username">
+			<td><%= current_user.username %></td>
+		</tr>
+		<tr class="characteristic">
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
 </section>

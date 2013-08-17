@@ -25,8 +25,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   
   def friend_requests
-    unapproved_friendships = Friendship.where('friend_id = ? AND status = ?',self.id,0)
-    unapproved_friendships.map { |friendship| {friendname: User.find(friendship.user_id).username,
+    unapproved_friendships = Friendship.includes(:user).where('friend_id = ? AND status = ?',self.id,0)
+    unapproved_friendships.map { |friendship| {friendname: friendship.user.username,
                                                user_id: friendship.user_id,
                                                id: friendship.id} }
   end
@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
   end
   
   def feed
-    activities = FriendActivity.feed(self)
+    activities = FriendActivity.includes({activity: :user}).feed(self)
     activities.map { |friend_activity| {
                                         username: friend_activity.activity.user.username,
                                         picture: friend_activity.activity.user.profile_photo.url(:thumb),
@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   end
   
   def notifications_count
-    self.notifications.where('read = ?',0).count
+    self.notifications.where('read = ?',0).length
   end
   
   def unread_notifications

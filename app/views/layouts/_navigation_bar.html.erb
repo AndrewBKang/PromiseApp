@@ -5,14 +5,15 @@
 			<li><%= link_to("logo", resolutions_url) %></li>
 			<li>
 				<a class="request-tab" href="#">
+					<% requests = current_user.friend_requests %>
 					friend requests 
 					<% if current_user.friend_requests.length > 0 %>
-						<strong class="badge"><%= current_user.friend_requests.length %></strong> 
+						<strong class="badge"><%= requests.length %></strong> 
 					<% end %>
 				</a>
 				<ul class="nav-dropdown requests-list bubble clearfix">
-					<% current_user.friend_requests.each do |request| %>
-						<li>
+					<% requests.each do |request| %>
+						<li >
 							<div class="name"><%= link_to(request[:friendname],user_url(request[:user_id])) %></div>
 							<%= button_to "Accept", friendship_url(request[:id]), method: "put", remote:true, class:"new_friend" %>
 						</li>
@@ -28,7 +29,8 @@
 					<% end %>
 				</a>
 				<ul class="nav-dropdown notifications-list bubble clearfix">
-					<% current_user.notifications.reverse.each do |note| %>
+					<% notifications = current_user.notifications.reverse %>
+					<% notifications.each do |note| %>
 						<li>
 							<div class="message">
 								<%= link_to(note.message,user_url(note.activity.user_id)) %>
@@ -62,7 +64,7 @@ $('.button_to').on("ajax:success", function(event){
 });
 
 $('.notification-tab').on("ajax:success", function(){
-	$('.badge').hide();
+	$(this).find('.badge').hide();
 });
 
 </script>
