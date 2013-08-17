@@ -20,7 +20,7 @@ class ResolutionsController < ApplicationController
   end
   
   def show
-    @resolution = Resolution.find(params[:id])
+    @resolution = Resolution.includes({comments: :user}, :user).find(params[:id])
   end
   
 end
