@@ -24,6 +24,8 @@ class User < ActiveRecord::Base
   
   validates_uniqueness_of :username
   
+  validates_length_of :username, maximum: 10
+  
   def friend_requests
     unapproved_friendships = Friendship.includes(:user).where('friend_id = ? AND status = ?',self.id,0)
     unapproved_friendships.map { |friendship| {friendname: friendship.user.username,

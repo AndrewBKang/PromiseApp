@@ -7,15 +7,17 @@
 				<a class="request-tab" href="#">
 					<% requests = current_user.friend_requests %>
 					friend requests 
-					<% if current_user.friend_requests.length > 0 %>
+					<% if requests.length > 0 %>
 						<strong class="badge"><%= requests.length %></strong> 
 					<% end %>
 				</a>
 				<ul class="nav-dropdown requests-list bubble clearfix">
 					<% requests.each do |request| %>
-						<li >
-							<div class="name"><%= link_to(request[:friendname],user_url(request[:user_id])) %></div>
-							<%= button_to "Accept", friendship_url(request[:id]), method: "put", remote:true, class:"new_friend" %>
+						<li class="clearfix">
+							<div class="request">
+								<div class="name"><%= link_to(request[:friendname],user_url(request[:user_id])) %></div>
+								<%= button_to "Accept", friendship_url(request[:id]), method: "put", remote:true, class:"new_friend" %>
+							</div>
 						</li>
 					<% end %>
 				</ul>
@@ -58,7 +60,7 @@
 <script>
 
 $('.button_to').on("ajax:success", function(event){
-	$(event.target).parent().addClass('friended');
+	$(event.target).parent().parent().hide();
 	var $badge = $('.badge');
 	($badge.text() == 1) ? $badge.addClass('friended') : $badge.text($badge.text()-1)
 });

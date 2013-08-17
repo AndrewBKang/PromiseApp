@@ -609,6 +609,21 @@ footer > .footer-bar {
 }*/
 
 .nav-dropdown > li {
+	display:block;
+	position:absoute;
+	padding:10px;
+}
+
+.requests-list > li > .request {
+	width:220px;
+}
+
+.requests-list > li > .request > form {
+	float:right;
+}
+
+.request > .name {
+	padding-top:4px;
 	float:left;
 }
 
@@ -618,8 +633,6 @@ footer > .footer-bar {
 }
 
 .navbar > .left-menu > li > .nav-dropdown > li > .message {
-	padding:10px;
-	background-color: rgba(207,249,234,.9);
 }
 
 .navbar > .left-menu > li > .nav-dropdown > li > .message > a{
