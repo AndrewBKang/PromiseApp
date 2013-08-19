@@ -9,10 +9,11 @@ class User < ActiveRecord::Base
   attr_accessible :username, :email, :password, :profile_photo, :password_confirmation, :remember_me
   # attr_accessible :title, :body
   
-  has_many :friendships
-  has_many :friends, through: :friendships, source: :friend
-  has_many :notifications
-  has_many :comments
+  has_many :friendships, dependent: :destroy
+  has_many :friends, through: :friendships, source: :friend, dependent: :destroy
+  has_many :notifications, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :resolutions, dependent: :destroy
   
   has_attached_file :profile_photo, :styles => {
     :big => "150x150#",

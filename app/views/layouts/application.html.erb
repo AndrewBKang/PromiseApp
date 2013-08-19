@@ -11,11 +11,15 @@
 	
 	<%= render :partial => 'layouts/navigation_bar' %>
 	
+	<div class="errors">
+		<div class="error-bar">
+		<p class="notice"><%= notice %></p> 
+		<p class="alert"><%= alert %></p>	
+		</div>
+	</div>
 	
 	<div class="content clearfix">
-		<% if user_signed_in? %>
-		<p class="notice"><%= notice %></p> 
-		<p class="alert"><%= alert %></p>		
+		<% if user_signed_in? %>	
 		<%= render :partial => '/layouts/right_feed'%>
 		<%= render :partial => '/layouts/profile'%>
 		<% end %>

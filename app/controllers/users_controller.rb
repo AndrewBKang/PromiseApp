@@ -23,8 +23,10 @@ class UsersController < ApplicationController
   end
   
   def update
-    current_user.profile_photo = params[:user][:profile_photo]
-    current_user.save
+    if params[:user]
+      current_user.profile_photo = params[:user][:profile_photo]
+      current_user.save
+    end
     redirect_to :profile
   end
   

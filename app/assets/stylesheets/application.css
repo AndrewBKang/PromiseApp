@@ -215,6 +215,17 @@ time {
 	color:white;
 }
 
+.errors {
+	position:fixed;
+	margin-top:40px;
+	width:100%;
+}
+
+.error-bar {
+	width:1000px;
+	margin:auto;
+}
+
 /* Content */
 
 .content {
