@@ -1,7 +1,7 @@
 PromiseApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   
-  config.action_mailer.default_url_options = { :host => 'http://promiseapp.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'promiseapp.herokuapp.com' }
   
   # ActionMailer::Base.smtp_settings = {
   #   :address        => "smtp.sendgrid.net",
