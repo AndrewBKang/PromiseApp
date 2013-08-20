@@ -12,22 +12,6 @@ Promise App is a social network for resolutions and promises. Resolutions and Pr
 -JQuery/JQuery UI for infinite scrolling, resizable divs, drag and drop divs
 -AJAX/UJS (less redirects, segway to backbone later)
 
-##User Experience (current)
-
--Users sign up, optionally with a profile pic (later will implement default pic)
--Users must check email to confirm
--Upon signing in users can visit profile page and create a resolution
--Users can go to user show pages to add friend
--Request is sent to other User who will have a friend request on the nav bar
--drop down appears from navbar on click and user can accept friend request which subtracts the request # by one or removes if none
--the friend requester then receives a notification that the friend request was accepted
--once a friendship is made, users' friend activity shows up in a right sidebar news feed. 
--all window containers of resolutions have infinite scroll with 25 resolutions on each ajax request
--resolutions can be commented on, no button, just press enter on the text area below a resolution
--comments can be seen by clicking the "#{num_comments} comments" link
--comments are not yet paginated, todo
--users can also change profile picture on profile page and logout
-
 ##Project Details
 
 - Friend-activity, Notifications, Likes, Comments, Updates have polymorphic associations
@@ -61,4 +45,18 @@ Promise App is a social network for resolutions and promises. Resolutions and Pr
 13.Home Page (sortable divs)
 14.Change to backbone
 
+##User Experience (current)
 
+-Users sign up, optionally with a profile pic (later will implement default pic)
+-Users must check email to confirm
+-Upon signing in users can visit profile page and create a resolution
+-Users can go to user show pages to add friend
+-Request is sent to other User who will have a friend request on the nav bar
+-drop down appears from navbar on click and user can accept friend request which subtracts the request # by one or removes if none
+-the friend requester then receives a notification that the friend request was accepted
+-once a friendship is made, users' friend activity shows up in a right sidebar news feed. 
+-all window containers of resolutions have infinite scroll with 25 resolutions on each ajax request
+-resolutions can be commented on, no button, just press enter on the text area below a resolution
+-comments can be seen by clicking the "#{num_comments} comments" link
+-comments are not yet paginated, todo
+-users can also change profile picture on profile page and logout
