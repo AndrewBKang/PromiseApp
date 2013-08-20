@@ -12,7 +12,7 @@
 	<%= render :partial => 'layouts/navigation_bar' %>
 	
 	<div class="errors">
-		<div class="error-bar">
+		<div class="error-bar <%= 'center' unless current_user %>">
 		<p class="notice"><%= notice %></p> 
 		<p class="alert"><%= alert %></p>	
 		</div>
@@ -30,7 +30,7 @@
 </body>
 <footer>
 	<div class="footer-bar">
-		<div class="logo">PromiseApp &copy; 2013
+		<div class="logo">Promisrs &copy; 2013
 		<% unless Time.now.year == 2013 %>
 		- <%= Time.now.year %>
 		<% end %></div>
