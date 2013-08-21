@@ -1,12 +1,12 @@
 <div class="header">
+	<div class="title clearfix">
+		<h4><%= link_to((resolution.user.username),
+		user_url(resolution.user.id)) %></h4>
+		<ul class="info clearfix">
+			<li><a href="#"><%= time_ago_in_words(resolution.created_at.to_time) %> ago</a></li>
+		</ul>
+	</div>
 	<section class="resolution">
-		<div class="title clearfix">
-			<h4><%= link_to((resolution.user.username),
-			user_url(resolution.user.id)) %></h4>
-			<ul class="info clearfix">
-				<li><a href="#"><%= time_ago_in_words(resolution.created_at.to_time) %> ago</a></li>
-			</ul>
-		</div>
 		<div class="statement">
 			<p><%= resolution.body %></p>
 		</div>

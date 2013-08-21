@@ -27,7 +27,7 @@ $(document).ready(function(){
 		maxWidth: 400,
 		minWidth: 400,
 		maxHeight: 480,
-		minHeight: 40
+		minHeight: 20
 	});
 	
 	$('.feed-right > ul').resizable({
@@ -65,7 +65,5 @@ $(document).ready(function(){
 	$('.resolution-list').on('click', '.update-button', function(event){
 		$(this).parent().find('.update-form').toggle();
 	});
-	
-	$('.')
 	
 });

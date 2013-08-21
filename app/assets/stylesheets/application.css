@@ -437,10 +437,15 @@ footer > .footer-bar {
 }
 
 .scroll-content > .resolution-list > .mini-window > .header {
-	height:100%;
 	margin-left:91px;
 	width:410px;
 	background-color:rgba(255,255,255,.75);
+}
+
+.header > .title {
+	height:15px;
+	padding-top:10px;
+	padding-bottom:5px;
 }
 
 .scroll-content > .resolution-list > .mini-window > .friends-profile {
@@ -465,27 +470,28 @@ footer > .footer-bar {
 	float:right;
 	width:400px;
 	padding:10px;
+	padding-top:0;
 	padding-bottom:0;
 	border-bottom:1px solid lightgray;
 	overflow:hidden;
-	height:40px;
+	height:20px;
 	margin-bottom:2px;
 }
 
-.scroll-content > .resolution-list > .mini-window > .header > .resolution > .title > h4 {
+.scroll-content > .resolution-list > .mini-window > .header > .title > h4 {
 	float:left;
 	font-size: 13px;
 }
 
-.resolution > .title > h4 > a {
+.title > h4 > a {
 	color:#10BA8F;
 }
 
-.scroll-content > .resolution-list > .mini-window > .header > .resolution > .title > .info {
+.scroll-content > .resolution-list > .mini-window > .header > .title > .info {
 	float:right;
 	font-size:10px;
 }
-.scroll-content > .resolution-list > .mini-window > .header > .resolution > .title > .info > li {
+.scroll-content > .resolution-list > .mini-window > .header > .title > .info > li {
 	float:left;
 	margin-right: 4px ;
 }
@@ -495,14 +501,14 @@ footer > .footer-bar {
 }
 
 .scroll-content > .resolution-list > .mini-window > .header > .resolution > .statement {
-	padding-top:5px;
 	overflow:scroll;
 	height:100%;
 }
 
 .scroll-content > .resolution-list > .mini-window > .mini-footer {
 	padding-top:5px;
-	width:100%;
+	padding-left:71px;
+	width:430px;
 }
 
 .scroll-content > .resolution-list > .mini-window > .mini-footer > .comment > .new_comment {
