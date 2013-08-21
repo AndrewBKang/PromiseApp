@@ -4,13 +4,13 @@ Promise App is a social network for resolutions and promises. Resolutions and Pr
 
 ##Technologies Used
 
--Devise for user login and registration
--SendGrid for email confirmations and forgotten passwords
--Paperclip/Amazon S3 for profile pictures and resolution update pictures
--Figaro to hide Sendgrid and S3 keys/id
--Kaminari for pagination
--JQuery/JQuery UI for infinite scrolling, resizable divs, drag and drop divs
--AJAX/UJS (less redirects, segway to backbone later)
+- Devise for user login and registration
+- SendGrid for email confirmations and forgotten passwords
+- Paperclip/Amazon S3 for profile pictures and resolution update pictures
+- Figaro to hide Sendgrid and S3 keys/id
+- Kaminari for pagination
+- JQuery/JQuery UI for infinite scrolling, resizable divs, drag and drop divs
+- AJAX/UJS (less redirects, segway to backbone later)
 
 ##Project Details
 
@@ -22,41 +22,33 @@ Promise App is a social network for resolutions and promises. Resolutions and Pr
 
 ##TODO
 
-0.Resolution titles? pictures?
-- decide whether or not you want to bring back titles...
-1.Separate scripts into their own files
-2.Updates
-- make partial
-3.Likes
+- Resolution titles? pictures?
+- Separate scripts into their own files
+- make partial for updates
+- Likes
 - create, destroy (just controller actions)
-4.Comments
-- paginate on click, no empty comments(jq: prevent default)
-5.Observers
-- for polymorphic associations
-6.ElasticSearch
-- search usernames, resolution title? statement?, maybe comments?
-7.OmniAuth
--sign in with facebook
-8.Promises
-9.Groups (friend groups)
-10.Privacy settings on resolutions to friends and friend groups
-11.Placeholder/Default Profile Pic
-12.Try to Break Site and write validations/flash messages
-13.Home Page (sortable divs)
-14.Change to backbone
+- Comments paginate on click, no empty comments(jq: prevent default)
+- Observers for polymorphic associations
+- ElasticSearch usernames, resolution title? statement?, maybe comments?
+- OmniAuth, sign in with facebook
+- Promises
+- Groups (friend groups)
+- Privacy settings on resolutions to friends and friend groups
+- Placeholder/Default Profile Pic
+- Try to Break Site and write validations/flash messages
+- Home Page (sortable divs)
+- Change to backbone
 
 ##User Experience (current)
 
--Users sign up, optionally with a profile pic (later will implement default pic)
--Users must check email to confirm
--Upon signing in users can visit profile page and create a resolution
--Users can go to user show pages to add friend
--Request is sent to other User who will have a friend request on the nav bar
--drop down appears from navbar on click and user can accept friend request which subtracts the request # by one or removes if none
--the friend requester then receives a notification that the friend request was accepted
--once a friendship is made, users' friend activity shows up in a right sidebar news feed. 
--all window containers of resolutions have infinite scroll with 25 resolutions on each ajax request
--resolutions can be commented on, no button, just press enter on the text area below a resolution
--comments can be seen by clicking the "#{num_comments} comments" link
--comments are not yet paginated, todo
--users can also change profile picture on profile page and logout
+- Sign up with email confirmation
+- Users can create resolutions
+- Users can add friends
+- friend requests on nav bar
+- drop downs on nav bar, ajax friend requests and notifications
+- friend activity news feed
+- infinite scroll pagination in resolution divs
+- comments entered on keypress no button
+- comments toggle on click
+- comments are not yet paginated, todo
+- users can also change profile picture on profile page and logout
