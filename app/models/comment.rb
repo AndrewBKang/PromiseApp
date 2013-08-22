@@ -5,6 +5,7 @@ class Comment < ActiveRecord::Base
   belongs_to :commentable, polymorphic:true
   has_many :comments, as: :commentable
   has_many :likes, as: :likeable
+  has_many :notifications, as: :activity, dependent: :destroy
   
   validates_presence_of :body
 end

@@ -12,8 +12,11 @@ class Notification < ActiveRecord::Base
       self.user_id ||= self.activity.friend_id
       self.message ||= "#{self.activity.user.username} accepted your friend request!"
     elsif self.activity_type == "Comment"
-      self.user_id ||= self.activity.user_id
-      self.message ||= "#{self.activity.user.username}"
+      self.user_id ||= self.activity.commentable.user_id
+      self.message ||= "#{self.activity.user.username} made a comment on your #{self.activity.commentable_type}"
+    elsif self.activity_type == "Like"
+      self.user_id ||= self.activity.likeable.user_id
+      self.message ||= "#{self.activity.user.username} liked your #{self.activity.likeable_type}"
     end
   end
   

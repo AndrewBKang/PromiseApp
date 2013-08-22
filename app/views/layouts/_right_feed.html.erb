@@ -2,14 +2,16 @@
 	<h3>Friend Activity</h3>
 	<ul>
 		<div class="feed-right-scroll-container">
-		<% current_user.feed.each do |activity| %>
+		<% current_user.feed.each do |friend_activity| %>
 			<li>
-				<figure><%= link_to(image_tag(activity[:picture]),user_url(activity[:user_id])) %></figure>
-				<h4><%= link_to(activity[:username],user_url(activity[:user_id])) %></h4>
+				<figure><%= link_to(image_tag(friend_activity.activity.user.profile_photo.url(:thumb)),user_url(friend_activity.user_id)) %></figure>
+				<h4><%= link_to(friend_activity.activity.user.username,user_url(friend_activity.activity.user_id)) %></h4>
 				<header>
 					<div class="news">
 						<%= "made a new " %>
-						<%= link_to(activity[:type], resolution_url(activity[:activity_id]))%>
+						<%= link_to(friend_activity.activity_type, resolution_url(friend_activity.activity_id)) if friend_activity.activity_type == "Resolution"%>
+						<%= link_to(friend_activity.activity_type,
+						resolution_url(friend_activity.activity.updateable_id)) if friend_activity.activity_type == "Update" %>
 					</div>
 				</header>
 			</li>

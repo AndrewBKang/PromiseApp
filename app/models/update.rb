@@ -11,6 +11,7 @@ class Update < ActiveRecord::Base
   
   has_many :comments, as: :commentable, dependent: :destroy
   has_many :likes, as: :likeable, dependent: :destroy
+  has_many :friend_activities, as: :activity, dependent: :destroy
   
   validates_presence_of :body
   

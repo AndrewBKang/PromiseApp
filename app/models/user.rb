@@ -41,12 +41,12 @@ class User < ActiveRecord::Base
   
   def feed
     activities = FriendActivity.includes({activity: :user}).feed(self)
-    activities.map { |friend_activity| {
-                                        username: friend_activity.activity.user.username,
-                                        picture: friend_activity.activity.user.profile_photo.url(:thumb),
-                                        type: friend_activity.activity_type, 
-                                        user_id: friend_activity.user_id,
-                                        activity_id: friend_activity.id}}
+    # activities.map { |friend_activity| {
+    #                                     username: friend_activity.activity.user.username,
+    #                                     picture: friend_activity.activity.user.profile_photo.url(:thumb),
+    #                                     type: friend_activity.activity_type, 
+    #                                     user_id: friend_activity.user_id,
+    #                                     activity_id: friend_activity.id}}
   end
   
   def notifications_count

@@ -3,7 +3,10 @@ class LikesController < ApplicationController
   def create
     @like = Like.new(params[:like])
     @like.user_id = current_user.id
-    render nothing: true if @like.save && request.xhr?
+    if @like.save && request.xhr?
+      @like.notifications.create
+      render nothing: true 
+    end
   end
   
   def unlike
