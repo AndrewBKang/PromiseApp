@@ -4,7 +4,7 @@ class ResolutionsController < ApplicationController
   
   def index
     @comment = Comment.new
-    @resolutions = Resolution.includes(:user, likes: :user, comments: :user, updates:[:user, {comments: :user, likes: :user}]).order('id DESC').page(params[:page])
+    @resolutions = Resolution.includes(:user, likes: :user, comments: :user, updates:[:user, {comments: :user, likes: :user}]).order('id DESC').page(params[:page]).per(5)
     render @resolutions if request.xhr?
   end
   

@@ -51,7 +51,19 @@
 			maxHeight: 480,
 			minHeight: 20
 		});
-
+	});
+	
+	$('.resolution-list').on('ajax:success', '.new_like', function(event) {
+		var likesCount = $(this).closest('.mini-footer').find('.likes-count');
+		likesCount.text(parseInt(likesCount.text())+1);
+		$(this).toggleClass('liked');
+	});
+	
+	$('.resolution-list').on('ajax:success', '.unlike_form', function(event) {
+		var likesCount = 
+		$(this).closest('.mini-footer').find('.likes-count');
+		likesCount.text(likesCount.text()-1);
+		$(this).toggleClass('liked');
 	});
 	
 </script>

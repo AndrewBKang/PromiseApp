@@ -605,11 +605,19 @@ footer > .footer-bar {
 	color:darkgray;
 }
 
-.left-list > li > .like-button {
+.like-button {
 	background-color: rgba(207,249,234,.9);
 	padding:1px 4px;
 	color:#10BA8F;
 	border:1px solid #10BA8F;
+}
+
+.like-button:hover {
+	cursor: pointer;
+}
+
+.liked {
+	display:none;
 }
 
 /* Navigation Bar */
