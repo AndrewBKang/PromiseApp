@@ -1,6 +1,5 @@
 
 <ul class="window-container-list">
-
 	<div class="mini-window-header-content glow">
 		<h3><a href="#"><%= window_type %></a></h3>
 		<li class="mini-window-container">
@@ -44,7 +43,15 @@
 		var updatesCount = $(this).closest('.mini-footer').find(".updates-count");
 		updatesCount.text(parseInt(updatesCount.text())+1);
 		$(this).parent().slideUp();
-		$(this).closest('.mini-window').next(".updates").append(xhr.responseText);
+		var appendee = xhr.responseText;
+		$(this).closest('.mini-window').next(".updates").append(appendee);
+		$(this).closest('.mini-window').next(".updates").find( "li:last-child").find('.resolution').resizable(
+		{	maxWidth: 330,
+			minWidth: 330,
+			maxHeight: 480,
+			minHeight: 20
+		});
+
 	});
 	
 </script>

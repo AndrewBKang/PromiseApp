@@ -33,10 +33,17 @@
 	});
 
 	$('#new_resolution').on("ajax:success", function(event,data){
-		$('.resolution-list').prepend(data);
 		$('#resolution_title').val('');
 		$('#resolution_body').val('');
 		$('.resolution_form').hide();
+		$('.resolution-list').prepend(data);
+		
+		$('.resolution-list').find("li:first-child").find('.resolution').resizable(
+		{	maxWidth: 400,
+			minWidth: 400,
+			maxHeight: 480,
+			minHeight: 20
+		});
 	});
 
 </script>

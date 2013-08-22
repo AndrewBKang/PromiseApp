@@ -22,13 +22,14 @@ $(document).ready(function(){
 		maxHeight: 800,
 		minHeight: 35
 	});
-	
+
 	$('.resolution').resizable({
 		maxWidth: 400,
 		minWidth: 400,
 		maxHeight: 480,
 		minHeight: 20
 	});
+
 	
 	$('.updates').find('.resolution').resizable({
 		minHeight:20,
