@@ -30,6 +30,13 @@ $(document).ready(function(){
 		minHeight: 20
 	});
 	
+	$('.updates').find('.resolution').resizable({
+		minHeight:20,
+		maxHeight:480,
+		minWidth:330,
+		maxWidth:330
+	})
+	
 	$('.feed-right > ul').resizable({
 		maxHeight:480,
 		minHeight:55,

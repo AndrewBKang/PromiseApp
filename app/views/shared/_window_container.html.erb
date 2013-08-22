@@ -39,12 +39,12 @@
 		$(this).parent().parent().siblings(".comments").append(data);
 	});
 	
-	$('.resolution-list').on('ajax:success','.new_update',function(event, data) {
+	$('.resolution-list').on('ajax:success','.new_update',function(event, data, status, xhr) {
 		$(this).find('#update_body').val('');
-		$(this).closest('.mini-window').next(".updates").append(data);
 		var updatesCount = $(this).closest('.mini-footer').find(".updates-count");
 		updatesCount.text(parseInt(updatesCount.text())+1);
 		$(this).parent().slideUp();
+		$(this).closest('.mini-window').next(".updates").append(xhr.responseText);
 	});
 	
 </script>

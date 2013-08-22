@@ -496,6 +496,11 @@ footer > .footer-bar {
 	margin-bottom:2px;
 }
 
+.update-pic {
+	float:left;
+	padding:5px;
+}
+
 .updates > .mini-window > .header > .resolution {
 	width:330px;
 }
@@ -571,6 +576,10 @@ footer > .footer-bar {
 	padding:10px;
 	background-color: rgba(207,249,234,.9);
 	z-index:50;
+	width:180px;
+}
+
+#update_update_photo {
 	width:180px;
 }
 

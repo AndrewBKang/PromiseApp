@@ -8,7 +8,14 @@
 	</div>
 	<section class="resolution">
 		<div class="statement">
-			<p><%= resolution.body %></p>
+			<% if resolution.class.name == "Update" && resolution.update_photo_file_name%>
+			<figure class="update-pic">
+				<%= image_tag(resolution.update_photo.url(:post_size)) %>
+			</figure>
+			<% end %>
+			<p>
+				<%= resolution.body %>
+			</p>
 		</div>
 	</section>
 </div>
