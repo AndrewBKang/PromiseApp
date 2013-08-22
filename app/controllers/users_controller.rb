@@ -4,13 +4,13 @@ class UsersController < ApplicationController
   
   def profile
     @resolution = Resolution.new
-    @resolutions = Resolution.includes({comments: :user}, :user).where(user_id: current_user.id).order("id DESC").page(params[:page])
+    @resolutions = Resolution.includes(:user, likes: :user, comments: :user, updates:[:user, {comments: :user, likes: :user}]).where(user_id: current_user.id).order("id DESC").page(params[:page])
     render @resolutions if request.xhr?
   end
   
   def show
     @friendship = Friendship.new
-    @resolutions = Resolution.includes({comments: :user}, :user).where(user_id: params[:id]).order("id DESC")
+    @resolutions = Resolution.includes(:user, likes: :user, comments: :user, updates:[:user, {comments: :user, likes: :user}]).where(user_id: params[:id]).order("id DESC")
     user = User.find(params[:id])
     @profile_pic = user.profile_photo.url(:small)
     @username = user.username

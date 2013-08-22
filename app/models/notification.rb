@@ -11,6 +11,9 @@ class Notification < ActiveRecord::Base
     if self.activity_type == "Friendship"
       self.user_id ||= self.activity.friend_id
       self.message ||= "#{self.activity.user.username} accepted your friend request!"
+    elsif self.activity_type == "Comment"
+      self.user_id ||= self.activity.user_id
+      self.message ||= "#{self.activity.user.username}"
     end
   end
   

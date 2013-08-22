@@ -1,8 +1,9 @@
 class UpdatesController < ApplicationController
 
   def create
-    @update = Update.create(params[:update])
-    if request.xhr?
+    @update = Update.new(params[:update])
+    @update.user_id = current_user.id
+    if @update.save && request.xhr?
       render @update
     end
   end

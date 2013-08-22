@@ -50,6 +50,10 @@ $(document).ready(function(){
 		$('.notifications-list').toggle();
 	});
 	
+	$('.navbar > .right-menu > li > .home-tab').on('click', function(event){
+		$('.home-message').toggle();
+	});
+	
 	$('.page-navbar > li > .new_res').on('click', function(event){
 		$('.resolution_form').toggle();
 	});
@@ -59,11 +63,30 @@ $(document).ready(function(){
 	});
 	
 	$('.resolution-list').on('click','.show-comment > a', function(event){
-		$(event.target).closest('.mini-window').find('.comments').toggle();
+		var $comments = $(event.target).closest('.mini-window').find('.comments');
+		if ($comments.is(":hidden")){
+			$comments.slideDown();
+		} else {
+			$comments.slideUp();
+		}
 	});
 	
 	$('.resolution-list').on('click', '.update-button', function(event){
-		$(this).parent().find('.update-form').toggle();
+		var $updateForm = $(this).parent().find('.update-form');
+		if($updateForm.is(":hidden")) {
+			$updateForm.slideDown();
+		} else {
+			$updateForm.slideUp()
+		}
+	});
+	
+	$('.resolution-list').on('click', '.show-updates > a', function(event){
+		var $update = $(event.target).closest('.mini-window').next('.updates');
+		if($update.is(":hidden")) {
+			$update.slideDown();
+		} else {
+			$update.slideUp();
+		}
 	});
 	
 });

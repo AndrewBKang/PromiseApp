@@ -16,14 +16,12 @@
 							<li>
 								<%= render @resolution %>
 							</li>
-							<!-- resolution updates nested comments-->
 						</ul>
 					<% end %>
 				</div>
 			</div>
 		</li>
 	</div>
-
 </ul>
 
 <script>
@@ -40,4 +38,13 @@
 		commentCount.text(parseInt(commentCount.text())+1);
 		$(this).parent().parent().siblings(".comments").append(data);
 	});
+	
+	$('.resolution-list').on('ajax:success','.new_update',function(event, data) {
+		$(this).find('#update_body').val('');
+		$(this).closest('.mini-window').next(".updates").append(data);
+		var updatesCount = $(this).closest('.mini-footer').find(".updates-count");
+		updatesCount.text(parseInt(updatesCount.text())+1);
+		$(this).parent().slideUp();
+	});
+	
 </script>

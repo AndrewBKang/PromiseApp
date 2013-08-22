@@ -391,6 +391,10 @@ footer > .footer-bar {
 	display:none;
 }
 
+.updates > .mini-window > .comments {
+	width:290px;
+}
+
 .resolution > .statement {
 	height:56px;
 }
@@ -429,48 +433,62 @@ footer > .footer-bar {
 	text-align:center;
 }
 
-.scroll-content > .resolution-list > .mini-window {
+.updates {
+	display:none;
+}
+
+.mini-window {
 	margin: 0px 10px;
 	margin-bottom: 5px;
 	width:501px;
-	border-bottom:1px solid lightgray;
+	border-top:1px solid lightgray;
 }
 
-.scroll-content > .resolution-list > .mini-window > .header {
+.updates > .mini-window {
+	width:420px;
+	margin-left:71px;
+	border-bottom:none;
+	border-top:1px solid lightgray;
+}
+
+.mini-window > .header {
 	margin-left:91px;
 	width:410px;
 	background-color:rgba(255,255,255,.75);
 }
 
+.updates > .mini-window > .header {
+	width:340px;
+}
+
 .header > .title {
 	height:15px;
 	padding-top:10px;
-	padding-bottom:5px;
 }
 
-.scroll-content > .resolution-list > .mini-window > .friends-profile {
+.mini-window > .friends-profile {
 	width: 70px;
 	float:left;
 }
 
-.scroll-content > .resolution-list > .mini-window > .friends-profile > .pic {
+.mini-window > .friends-profile > .pic {
 	margin: 10px;
 }
 
-.scroll-content > .resolution-list > .mini-window > .friends-profile > .friendname {
+.mini-window > .friends-profile > .friendname {
 	margin-top:-10px;
 	text-align:center;
 }
 
-.scroll-content > .resolution-list > .mini-window > .friends-profile > .friendname > a{
+.mini-window > .friends-profile > .friendname > a{
 	color:#10BA8F;
 }
 
-.scroll-content > .resolution-list > .mini-window > .header > .resolution {
+.mini-window > .header > .resolution {
 	float:right;
 	width:400px;
 	padding:10px;
-	padding-top:0;
+	padding-top:5px;
 	padding-bottom:0;
 	border-bottom:1px solid lightgray;
 	overflow:hidden;
@@ -478,7 +496,11 @@ footer > .footer-bar {
 	margin-bottom:2px;
 }
 
-.scroll-content > .resolution-list > .mini-window > .header > .title > h4 {
+.updates > .mini-window > .header > .resolution {
+	width:330px;
+}
+
+.mini-window > .header > .title > h4 {
 	float:left;
 	font-size: 13px;
 }
@@ -487,11 +509,11 @@ footer > .footer-bar {
 	color:#10BA8F;
 }
 
-.scroll-content > .resolution-list > .mini-window > .header > .title > .info {
+.mini-window > .header > .title > .info {
 	float:right;
 	font-size:10px;
 }
-.scroll-content > .resolution-list > .mini-window > .header > .title > .info > li {
+.mini-window > .header > .title > .info > li {
 	float:left;
 	margin-right: 4px ;
 }
@@ -500,18 +522,22 @@ footer > .footer-bar {
 	color:lightgray;
 }
 
-.scroll-content > .resolution-list > .mini-window > .header > .resolution > .statement {
+.mini-window > .header > .resolution > .statement {
 	overflow:scroll;
 	height:100%;
 }
 
-.scroll-content > .resolution-list > .mini-window > .mini-footer {
+.mini-window > .mini-footer {
 	padding-top:5px;
 	padding-left:71px;
 	width:430px;
 }
 
-.scroll-content > .resolution-list > .mini-window > .mini-footer > .comment > .new_comment {
+.updates > .mini-window > .mini-footer {
+	width:360px;
+}
+
+.mini-window > .mini-footer > .comment > .new_comment {
 	float:right;
 	width:315px;
 	padding-bottom:2px;
@@ -552,12 +578,12 @@ footer > .footer-bar {
 	color:lightgray;
 }
 
-.scroll-content > .resolution-list > .mini-window > .mini-footer > .links {
+.mini-window > .mini-footer > .links {
 	float:right;
 	padding:1px;
 }
 
-.scroll-content > .resolution-list > .mini-window > .mini-footer > .links > li {
+.mini-window > .mini-footer > .links > li {
 	float:left;
 	padding-right:7px;
 }
@@ -612,7 +638,7 @@ footer > .footer-bar {
 	padding: 10px 0;
 }
 
-.navbar > .left-menu > li > .nav-dropdown{
+.nav-dropdown{
 	margin-top:11px;
 	position:absolute;
 	color:black;
@@ -634,7 +660,6 @@ footer > .footer-bar {
 
 .nav-dropdown > li {
 	display:block;
-	position:absoute;
 	padding:10px;
 }
 
@@ -695,6 +720,10 @@ footer > .footer-bar {
 	z-index:100;
 	color:black;
 	padding: 10px;
+}
+
+.home-message {
+	display:none;
 }
 
 /* profile page */

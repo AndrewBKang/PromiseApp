@@ -1,34 +1,52 @@
 <div class="mini-footer clearfix">
 	<ul class="left-list">
-		<% if resolution.user.id == current_user.id%>
+		<% if resolution.user.id == current_user.id %>
+			<% if resolution.class.name == "Resolution" %>
+				<li>
+					<a class="update-button" href="#">update</a>
+					<div class="update-form">
+						<%= form_for Update.new, html: {:'data-type' => :html, multipart:true}, remote: true do |f| %>
+							<%= f.label :content %><br>
+							<%= f.text_area :body, size: '22x4'%><br>
+							<%= f.label :update_photo %>
+							<%= f.file_field :update_photo %>
+							<%= f.hidden_field :updateable_id %>
+							<%= hidden_field_tag 'update[updateable_id]', resolution.id %>
+							<%= f.hidden_field :updateable_type %>
+							<%= hidden_field_tag 'update[updateable_type]', resolution.class.name %>
+							<%= f.submit "Create Update" %>
+						<% end %>
+					</div>
+				</li>
+			<% end %>
+		<% else  %>
 			<li>
-				<a class="update-button" href="#">update</a>
-				<div class="update-form">
-					<%= form_for(Update.new, remote: true) do |f| %>
-						<%= f.label :content %><br>
-						<%= f.text_area :content, size: '22x4' %><br>
-						<%= f.label :update_photo %>
-						<%= f.file_field :update_photo %>
-						<%= f.hidden_field :updateable_id %>
-						<%= hidden_field_tag 'update[updateable_id]', resolution.id %>
-						<%= f.hidden_field :updateable_type %>
-						<%= hidden_field_tag 'update[updateable_type]', resolution.class.name %>
-						<%= f.submit "Create Update" %>
-					<% end %>
-				</div>
+				<% unless resolution.likes.map{|like| like.user.id}.include? current_user.id%>
+				<a class="like-button" href="#">like</a>
+				<% else %>
+				<a class="like-button unlike" href="#">unlike</a>
+				<% end %>
 			</li>
-		<% else %>
-			<li><a class="like-button" href="#">like</a></li>
 		<% end %>
 	</ul>
 	<ul class="links clearfix">
+		<% if resolution.class.name == "Resolution" %>
+			<li class="show-updates">
+				<a href="#">
+					<span class="updates-count"><%= resolution.updates.length %></span> updates
+				</a>
+			</li>
+		<% end %>
 		<li class="show-comment">
 			<a href="#"> 
 				<span class="comments-count"><%= resolution.comments.length %></span> comments 
 			</a>
 		</li>
-		<li><a href="#">10 updates</a></li>
-		<li><a href="#"> -5 likes </a></li>
+		<li class="show-likes">
+			<a href="#">
+				<span class="likes-count"><%= resolution.likes.length %></span> likes 
+			</a>
+		</li>
 	</ul>
 	<div class="comment">
 	<%= render :partial => 'shared/comment_form', locals: {resolution: resolution} %>

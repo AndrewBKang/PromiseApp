@@ -13,6 +13,7 @@ PromiseApp::Application.routes.draw do
   resources :friendships, only: [:create,:destroy,:update]
   resources :comments, only: [:create, :destroy]
   resources :updates, only: [:create, :destroy]
+  resources :likes, only: [:create, :destroy]
   
   match 'read/:count' => 'notifications#read', as: :read
   match 'profile' => 'users#profile'

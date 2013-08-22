@@ -2,7 +2,10 @@
 	<%= render :partial => 'shared/friend_profile', locals: {resolution: resolution} %>
 	<%= render :partial => 'shared/resolution_header', locals: {resolution: resolution} %>
 	<%= render :partial => 'shared/resolution_info_footer', locals: {resolution: resolution} %>
-	<ul class='comments clearfix'>
-	<%= render resolution.comments %>
+	<ul class="comments clearfix">
+		<%= render resolution.comments %>
 	</ul>
 </li>
+<ul class="updates clearfix">
+	<%= render resolution.updates %>
+</ul>

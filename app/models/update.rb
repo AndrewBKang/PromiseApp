@@ -1,6 +1,7 @@
 class Update < ActiveRecord::Base
-  attr_accessible :content, :update_photo, :updateable_id, :updateable_type
+  attr_accessible :body, :update_photo, :updateable_id, :updateable_type, :user_id
   
+  belongs_to :user
   belongs_to :updateable, polymorphic: true
   
   has_attached_file :update_photo, :styles => {
@@ -11,6 +12,6 @@ class Update < ActiveRecord::Base
   has_many :comments, as: :commentable, dependent: :destroy
   has_many :likes, as: :likeable, dependent: :destroy
   
-  validates_presence_of :content
+  validates_presence_of :body
   
 end
