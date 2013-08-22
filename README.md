@@ -24,10 +24,8 @@ Promise App is a social network for resolutions and promises. Resolutions and Pr
 
 - Resolution titles? pictures?
 - Separate scripts into their own files
-- make partial for updates
 - Likes
-- create, destroy (just controller actions)
-- Comments paginate on click, no empty comments(jq: prevent default)
+- Comments/Updates paginate on click, no empty comments(jq: prevent default)
 - Observers for polymorphic associations
 - ElasticSearch usernames, resolution title? statement?, maybe comments?
 - OmniAuth, sign in with facebook
@@ -49,6 +47,7 @@ Promise App is a social network for resolutions and promises. Resolutions and Pr
 - friend activity news feed
 - infinite scroll pagination in resolution divs
 - comments entered on keypress no button
-- comments toggle on click
+- comments/updates toggle on click
 - comments are not yet paginated, todo
+- users can make updates
 - users can also change profile picture on profile page and logout
