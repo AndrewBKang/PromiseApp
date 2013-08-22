@@ -57,6 +57,7 @@
 		var likesCount = $(this).closest('.mini-footer').find('.likes-count');
 		likesCount.text(parseInt(likesCount.text())+1);
 		$(this).toggleClass('liked');
+		$(this).siblings('.unlike_form').attr('disabled', '');
 		$(this).siblings('.unlike_form').toggleClass('liked');
 	});
 	
@@ -65,7 +66,12 @@
 		$(this).closest('.mini-footer').find('.likes-count');
 		likesCount.text(likesCount.text()-1);
 		$(this).toggleClass('liked');
+		$(this).siblings('.new_like').attr('disabled', '');
 		$(this).siblings('.new_like').toggleClass('liked');
+	});
+	
+	$('.resolution-list').on('click', 'like-button', function(event){
+		$(this).attr('disabled','disabled');
 	});
 	
 </script>
