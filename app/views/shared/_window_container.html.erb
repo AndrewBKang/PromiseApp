@@ -57,6 +57,7 @@
 		var likesCount = $(this).closest('.mini-footer').find('.likes-count');
 		likesCount.text(parseInt(likesCount.text())+1);
 		$(this).toggleClass('liked');
+		$(this).siblings('.unlike_form').toggleClass('liked');
 	});
 	
 	$('.resolution-list').on('ajax:success', '.unlike_form', function(event) {
@@ -64,6 +65,7 @@
 		$(this).closest('.mini-footer').find('.likes-count');
 		likesCount.text(likesCount.text()-1);
 		$(this).toggleClass('liked');
+		$(this).siblings('.new_like').toggleClass('liked');
 	});
 	
 </script>
