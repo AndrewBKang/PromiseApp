@@ -25,6 +25,7 @@ Promise App is a social network for resolutions and promises. Resolutions and Pr
 - Resolution titles? pictures?
 - Separate scripts into their own files
 - Make likes show usernames
+- Move notification messages from model to controller
 - Comments/Updates paginate on click, no empty comments(jq: prevent default)
 - make pretty comments and updates picture partial
 - Observers for polymorphic associations
