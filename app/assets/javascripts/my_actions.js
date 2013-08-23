@@ -36,7 +36,7 @@ $(document).ready(function(){
 		maxHeight:480,
 		minWidth:330,
 		maxWidth:330
-	})
+	});
 	
 	$('.feed-right > ul').resizable({
 		maxHeight:480,

@@ -29,6 +29,18 @@ $('.mini-window-scroll-container').scroll(function(){
 			function(data) {
 				loading=false
 				$('.resolution-list').append(data)
+				$('.resolution').resizable({
+					maxWidth: 400,
+					minWidth: 400,
+					maxHeight: 480,
+					minHeight: 20
+				});
+				$('.updates').find('.resolution').resizable({
+					minHeight:20,
+					maxHeight:480,
+					minWidth:330,
+					maxWidth:330
+				});
 			}
 		) 
   }
