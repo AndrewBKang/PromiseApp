@@ -12,12 +12,12 @@
 				
 				<% liked = resolution.likes.map{|like| like.user.id}.include? current_user.id%>				
 				
-				<%= form_for Like.new, remote: true do |f|%>
+				<%= form_for Like.new, html: {class: "new_like #{'liked' if liked}"}, remote: true do |f|%>
 					<%= f.hidden_field  :likeable_id%>
 					<%= hidden_field_tag 'like[likeable_id]', resolution.id %>
 					<%= f.hidden_field :likeable_type %>
 					<%= hidden_field_tag 'like[likeable_type]', resolution.class.name %>
-					<%= f.submit :like, class: "like-button #{'liked' if liked}" %>
+					<%= f.submit :like, class: "like-button" %>
 				<% end  %>
 				
 					<%= form_tag({controller: 'likes', action: 'unlike', method: 'post'}, {class: "unlike_form #{'liked' unless liked}", remote: true}) do %>

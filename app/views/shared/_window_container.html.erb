@@ -66,8 +66,8 @@
 		$(this).closest('.mini-footer').find('.likes-count');
 		likesCount.text(likesCount.text()-1);
 		$(this).toggleClass('liked');
-		$(this).siblings('.new_like').attr('disabled', '');
 		$(this).siblings('.new_like').toggleClass('liked');
+		$(this).siblings('.new_like').attr('disabled', '');
 	});
 	
 	$('.resolution-list').on('click', 'like-button', function(event){
