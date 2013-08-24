@@ -20,7 +20,7 @@
 					<%= f.submit :like, class: "like-button" %>
 				<% end  %>
 				
-					<%= form_tag({controller: 'likes', action: 'unlike', method: 'post'}, {class: "unlike_form #{'liked' unless liked}", remote: true}) do %>
+					<%= form_tag({controller: 'likes', action: 'unlike', method: 'destroy'}, {class: "unlike_form #{'liked' unless liked}", remote: true}) do %>
 						<%= hidden_field_tag 'like[likeable_id]', resolution.id %>
 						<%= hidden_field_tag 'like[likeable_type]', resolution.class.name %>
 						<%= submit_tag :unlike, class: "like-button" %>
