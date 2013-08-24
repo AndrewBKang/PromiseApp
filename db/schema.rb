@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821160923) do
+ActiveRecord::Schema.define(:version => 20130824020538) do
 
   create_table "comments", :force => true do |t|
     t.text     "body"
@@ -39,11 +39,11 @@ ActiveRecord::Schema.define(:version => 20130821160923) do
   end
 
   create_table "likes", :force => true do |t|
-    t.string   "user_id"
+    t.integer  "user_id",       :limit => 255
     t.integer  "likeable_id"
     t.string   "likeable_type"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "notifications", :force => true do |t|
