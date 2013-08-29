@@ -48,9 +48,38 @@
 
 .sign-links {
 	margin:auto;
-	width:235px;
+	text-align:center;
+	margin-top:10px;
 }
 
+.sign-links > a {
+	padding:0 5px;
+}
+
+.sign-links > a:hover {
+	color:darkgray;
+}
+
+.sign-links > .guest {
+	position:relative;
+	width:80px;
+	background-color:rgba(207,249,234,1);
+	color:black;
+	font-size:12px;
+	padding:1px;
+	border: 1px outset buttonface;
+	padding:5px;
+}
+
+.sign-links > .guest:hover {
+	background-color:rgba(16, 186, 143, .5);
+	-webkit-transition: background-color 250ms linear;
+	color:black;
+}
+
+.sign-link {
+	color:#10BA8F;
+}
 .comments > li {
 
 }
