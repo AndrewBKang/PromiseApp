@@ -2,7 +2,7 @@
 <header class="nav">
 	<div class="navbar clearfix">
 		<ul class="left-menu">
-			<li><%= link_to("logo", resolutions_url) %></li>
+			<li><a href="<%= resolutions_url %>"><%= image_tag "transparentlogo.png", height: '12px',  class: 'logo'%></a></li>
 			<li>
 				<a class="request-tab" href="#">
 					<% requests = current_user.friend_requests %>
@@ -82,5 +82,12 @@ $('.button_to').on("ajax:success", function(event){
 $('.notification-tab').on("ajax:success", function(){
 	$(this).find('.badge').hide();
 });
+
+$('li').hover(function () {
+    $(this).addClass("swing animated");
+  },
+  function () {
+    $(this).removeClass("swing animated");
+  })
 
 </script>
