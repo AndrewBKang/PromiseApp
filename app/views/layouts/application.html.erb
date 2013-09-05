@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PromiseApp</title>
+  <title>Promisrs</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
@@ -20,13 +20,15 @@
 	
 	<div class="content clearfix">
 		<% if user_signed_in? %>	
-		<%= render :partial => '/layouts/right_feed'%>
-		<%= render :partial => '/layouts/profile'%>
+			<%= render :partial => '/layouts/right_feed'%>
+			<%= render :partial => '/layouts/profile'%>
 		<% end %>
 		<%= yield %>
 	</div>
+	
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	
 </body>
 <footer>
 	<div class="footer-bar">
