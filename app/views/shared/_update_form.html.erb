@@ -8,6 +8,6 @@
 		<%= hidden_field_tag 'update[updateable_id]', resolution.id %>
 		<%= f.hidden_field :updateable_type %>
 		<%= hidden_field_tag 'update[updateable_type]', resolution.class.name %>
-		<%= f.submit "Create Update" %>
+		<%= f.submit "Create Update", class:'update-button'%>
 	<% end %>
 </div>

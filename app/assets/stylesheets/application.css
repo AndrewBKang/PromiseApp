@@ -280,7 +280,7 @@ time {
 	
 footer {
 	position:fixed;
-	z-index:100;
+	z-index:-1;
 	width:100%;
 	margin-top:-33px;
 	height:33px;
@@ -301,7 +301,6 @@ footer > .footer-bar {
 }
 
 /* profile */
-
 
 .profile-container {
 	width:19%;
@@ -659,8 +658,9 @@ footer > .footer-bar {
 
 .nav {
 	z-index:100;
-	position:fixed;
+	min-width:1000px;
 	width:100%;
+	position:fixed;
 	height:50px;
 }
 
@@ -674,6 +674,7 @@ footer > .footer-bar {
 }
 
 .navbar {
+	position:relative;
 	margin:auto;
 	width: 1000px;
 	height:50px;

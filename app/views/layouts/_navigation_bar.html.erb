@@ -83,11 +83,17 @@ $('.notification-tab').on("ajax:success", function(){
 	$(this).find('.badge').hide();
 });
 
-$('.navbar > ul > li').hover(function () {
+$('.navbar > ul > li').hover(
+	function () {
     $(this).addClass("swing animated");
   },
   function () {
     $(this).removeClass("swing animated");
-  })
+  }
+);
+
+$(window).scroll(function() {
+    $('.navbar').css('left', -$(this).scrollLeft() + "px");
+});
 
 </script>

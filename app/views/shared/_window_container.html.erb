@@ -40,6 +40,7 @@
 	
 	$('.resolution-list').on('ajax:success','.new_update',function(event, data, status, xhr) {
 		$(this).find('#update_body').val('');
+		$(this).find('.update-button').removeAttr('disabled');
 		var updatesCount = $(this).closest('.mini-footer').find(".updates-count");
 		updatesCount.text(parseInt(updatesCount.text())+1);
 		$(this).parent().slideUp();
@@ -51,6 +52,11 @@
 			maxHeight: 480,
 			minHeight: 20
 		});
+	});
+	
+	$('.resolution-list').on('click', '.new_update > :submit', function(event){
+		var that = this;
+		setTimeout(function(){$(that).attr('disabled','disabled');}, 1)
 	});
 	
 	$('.resolution-list').on('ajax:success', '.new_like', function(event) {
