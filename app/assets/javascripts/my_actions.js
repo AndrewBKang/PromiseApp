@@ -50,15 +50,15 @@ $(document).ready(function(){
 		handle: 'h3'
 	});
 	
-	$('.navbar > .left-menu > li > .request-tab').on('click', function(event){
+	$('.navbar > .left-menu > li > div > .request-tab').on('click', function(event){
 		$('.requests-list').toggle();
 	});
 	
-	$('.navbar > .left-menu > li > .notification-tab').on('click', function(event){
+	$('.navbar > .left-menu > li > div > .notification-tab').on('click', function(event){
 		$('.notifications-list').toggle();
 	});
 	
-	$('.navbar > .right-menu > li > .home-tab').on('click', function(event){
+	$('.navbar > .right-menu > li > div > .home-tab').on('click', function(event){
 		$('.home-message').toggle();
 	});
 	

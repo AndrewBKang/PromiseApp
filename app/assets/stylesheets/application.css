@@ -664,7 +664,7 @@ footer > .footer-bar {
 	height:50px;
 }
 
-.navbar > ul > li > a {
+.navbar > ul > li > div >  a {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-size: 12px;
 }
@@ -761,7 +761,7 @@ footer > .footer-bar {
 	padding:5px;
 }
 
-.navbar > .left-menu > li > a {
+.navbar > .left-menu > li > div > a {
 	padding: 10px;
 	color:black;
 }
@@ -784,7 +784,7 @@ footer > .footer-bar {
 	padding: 10px 0;
 }
 
-.navbar > .right-menu > li > a{
+.navbar > .right-menu > li > div > a{
 	z-index:100;
 	color:black;
 	padding: 10px;
