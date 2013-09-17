@@ -438,7 +438,8 @@ footer > .footer-bar {
 .mini-window-scroll-container {
 	height:100%;
 	width:100%;
-	overflow:auto;
+	overflow-x:hidden;
+	overflow-y:scroll;
 }
 
 .mini-window-header-content > h3 {
@@ -561,7 +562,8 @@ footer > .footer-bar {
 }
 
 .mini-window > .header > .resolution > .statement {
-	overflow:scroll;
+	overflow-y:scroll;
+	overflow-x:hidden;
 	height:100%;
 }
 
